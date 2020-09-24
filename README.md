@@ -1,8 +1,9 @@
 [![C/C++ CI](https://github.com/Hirrolot/koshmar-pp/workflows/C/C++%20CI/badge.svg)](https://github.com/Hirrolot/koshmar-pp/actions)
 
-koshmar-pp is merely a set of macros empowering you to write complex [metaprograms] directly in C, without third-party code generators. It comes with control structures, collections, the missing recursion, and even custom data types.
+koshmar-pp is merely a set of macros empowering you to write complex [metaprograms] directly in C, without third-party code generators. It's standard-compliant, starting from [C99].
 
 [metaprograms]: https://en.wikipedia.org/wiki/Metaprogramming
+[C99]: https://en.wikipedia.org/wiki/C99
 
 ## Linked materials
 
