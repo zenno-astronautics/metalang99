@@ -4,7 +4,7 @@
     <img src="https://github.com/Hirrolot/koshmar-pp/workflows/C/C++%20CI/badge.svg">
   </a>
  
- koshmar-pp is merely a set of macros empowering you to write complex [metaprograms] directly in C, without third-party code generators. It's standard-compliant, starting from [C99].
+ koshmar-pp is a set of macros empowering you to write complex [metaprograms] directly in C, without third-party code generators. It's standard-compliant, starting from [C99].
 </div>
 
 [metaprograms]: https://en.wikipedia.org/wiki/Metaprogramming
