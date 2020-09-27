@@ -14,6 +14,6 @@
 
 ```
 reduce =
-    call(op, arg1, ..., argN) ---> reduce(op(reduce(arg1), ..., reduce(argN)))
+    call(op, arg1 ... argN) ---> reduce(op(reduce(arg1), ..., reduce(argN)))
     final(x1, ..., xN)        ---> x1, ..., xN
 ```
