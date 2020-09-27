@@ -1,7 +1,7 @@
 ## EBNF grammar
 
 ```ebnf
-<term>  ::= { <call> | <final> }* 
+<term>  ::= { <call> | <final> }* ;
 
 <call>  ::= "call(" <op> "," <args> ")" ;
 <op>    ::= <ident> ;
