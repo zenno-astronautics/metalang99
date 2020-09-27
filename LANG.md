@@ -5,8 +5,7 @@
 
 <call> ::= "call(" <macro-name> "," <args> ")" ;
 <macro-name> ::= <ident> ;
-<args> ::= "(" { <arg> "," }* <arg> ")" ;
-<arg> ::= "" | <term> ;
+<args> ::= "(" { <term> }* ")" ;
 
 <final> ::= "final(" { <pp-token> }* ")" ;
 ```
