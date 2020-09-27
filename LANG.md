@@ -3,8 +3,8 @@
 ```ebnf
 <term> ::= { <call> | <final> }* ;
 
-<call> ::= "call(" <op> "," <args> ")" ;
-<op> ::= <ident> ;
+<call> ::= "call(" <macro-name> "," <args> ")" ;
+<macro-name> ::= <ident> ;
 <args> ::= "(" { <arg> "," }* <arg> ")" ;
 <arg> ::= "" | <term> ;
 
