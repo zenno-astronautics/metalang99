@@ -1,19 +1,19 @@
 ## EBNF grammar
 
 ```ebnf
-<term> ::= { <call> | <final> }* ;
+<term> ::= { <call> | <value> }* ;
 
-<call> ::= "call(" <macro-name> "," <args> ")" ;
+<call> ::= "c(" <macro-name> "," <args> ")" ;
 <macro-name> ::= <ident> ;
 <args> ::= "(" { <term> }* ")" ;
 
-<final> ::= "final(" { <pp-token> }* ")" ;
+<value> ::= "v(" { <pp-token> }* ")" ;
 ```
 
 ## Reduction rules
 
 ```
 reduce =
-    call(op, arg1 ... argN) ---> reduce(op(reduce(arg1), ..., reduce(argN)))
-    final(x1, ..., xN)        ---> x1, ..., xN
+    c(op, arg1 ... argN) ---> reduce(op(reduce(arg1), ..., reduce(argN)))
+    v(x1, ..., xN)        ---> x1, ..., xN
 ```
