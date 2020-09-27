@@ -1,11 +1,12 @@
 ## EBNF grammar
 
 ```ebnf
-<program> ::= { term }* ;
+<term>  ::= { <call> | <final> }*        ;
 
-<term>    ::= <call> | <final> ;
-<call>    ::= "call(" <op> "," <args> ")" ;
-<final>   ::= "final(" { <pp-token> }* ")" ;
-<op>      ::= <ident> ;
-<args>    ::= "(" { <pp-token> "," }* [ <pp-token> ] ")" ;
+<call>  ::= "call(" <op> "," <args> ")"  ;
+<op>    ::= <ident>                      ;
+<args>  ::= "(" { <arg> "," }* <arg> ")" ;
+<arg>   ::= "" | <term>                  ;
+
+<final> ::= "final(" { <pp-token> }* ")" ;
 ```
