@@ -8,7 +8,7 @@
     <img src="https://img.shields.io/badge/docs-Doxygen-blue">
   </a>
  
- You're seeing an embedded [metalanguage] bringing the power of full-scale [metaprogramming] to plain C99, without third-party code generators.
+ You're seeing a [metalanguage] bringing the power of full-scale [metaprogramming] to plain C99, implemented only in terms of the standard-compliant preprocessor.
 </div>
 
 [metaprogramming]: https://en.wikipedia.org/wiki/Metaprogramming
