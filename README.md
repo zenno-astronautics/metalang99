@@ -8,11 +8,11 @@
     <img src="https://img.shields.io/badge/docs-Doxygen-blue">
   </a>
  
- koshmar-pp is a set of macros empowering you to write both small and complex [metaprograms] directly in C, without third-party code generators. It's standard-compliant, starting from [C99].
+ A [metalanguage] implemented only via macros, empowering you to write both small and complex [metaprograms] directly in C, without third-party code generators. Zero dependencies, C99-compliant.
 </div>
 
 [metaprograms]: https://en.wikipedia.org/wiki/Metaprogramming
-[C99]: https://en.wikipedia.org/wiki/C99
+[metalanguage]: https://en.wikipedia.org/wiki/Metalanguage
 
 ## FAQ
 
