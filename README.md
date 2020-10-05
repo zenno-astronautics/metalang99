@@ -8,7 +8,7 @@
     <img src="https://img.shields.io/badge/docs-Doxygen-blue">
   </a>
  
- A [metalanguage] implemented only via macros, empowering you to write both small and complex [metaprograms] directly in C, without third-party code generators. Zero dependencies, C99-compliant.
+ An embedded [metalanguage] empowering you to write both small and complex [metaprograms] directly in C, without third-party code generators.
 </div>
 
 [metaprograms]: https://en.wikipedia.org/wiki/Metaprogramming
