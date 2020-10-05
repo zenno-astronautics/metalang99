@@ -8,10 +8,10 @@
     <img src="https://img.shields.io/badge/docs-Doxygen-blue">
   </a>
  
- You're seeing an embedded [metalanguage] empowering you to write both small and complex [metaprograms] directly in C, without third-party code generators.
+ You're seeing an embedded [metalanguage] bringing the power of full-scale [metaprogramming] to plain C99, without third-party code generators.
 </div>
 
-[metaprograms]: https://en.wikipedia.org/wiki/Metaprogramming
+[metaprogramming]: https://en.wikipedia.org/wiki/Metaprogramming
 [metalanguage]: https://en.wikipedia.org/wiki/Metalanguage
 
 ## FAQ
