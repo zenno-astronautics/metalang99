@@ -1,6 +1,7 @@
 <div align="center">
   <h1>koshmar-pp</h1>
-  <img src="logo.png" >
+  <img src="logo.png">
+  <br>
   <a href="https://github.com/Hirrolot/koshmar-pp/actions">
     <img src="https://github.com/Hirrolot/koshmar-pp/workflows/C/C++%20CI/badge.svg">
   </a>
