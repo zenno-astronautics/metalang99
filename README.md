@@ -13,7 +13,7 @@
   However, metaprogramming in C is quite castrated: preprocessor control expressions don't exist at all, [recursion is blocked], no support for arithmetic, collections, et cetera. koshmar-pp is a [metalanguage] addressing all of the aforementioned problems, and furthermore, is implemented as a set of standard-compliant macros, thus avoiding the need for third-party code generators.
 </div>
 
-[embedded domain-specific languages]: https://en.wikipedia.org/wiki/Domain-specific_language
+[embedded domain-specific language]: https://en.wikipedia.org/wiki/Domain-specific_language
 [recursion is blocked]: https://github.com/pfultz2/Cloak/wiki/C-Preprocessor-tricks,-tips,-and-idioms#recursion
 [metalanguage]: https://en.wikipedia.org/wiki/Metalanguage
 
