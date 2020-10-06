@@ -7,9 +7,7 @@
   <a href="https://hirrolot.github.io/koshmar-pp/">
     <img src="https://img.shields.io/badge/docs-Doxygen-blue">
   </a>
-
-[metaprogramming]: https://en.wikipedia.org/wiki/Metaprogramming
-[metalanguage]: https://en.wikipedia.org/wiki/Metalanguage
+</div>
 
 ## FAQ
 
