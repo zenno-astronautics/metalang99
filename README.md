@@ -8,7 +8,7 @@
     <img src="https://img.shields.io/badge/docs-Doxygen-blue">
   </a>
  
- An embedded [metalanguage] aimed at full-scale [metaprogramming] in plain C: preprocessor control expressions, collections, custom data types, boolean & integer arithmetic and more!
+ An embedded [metalanguage] aimed at full-scale [metaprogramming] in plain C: preprocessor control expressions, collections, custom data types, boolean & integer arithmetic, ...
 </div>
 
 [metaprogramming]: https://en.wikipedia.org/wiki/Metaprogramming
