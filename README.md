@@ -10,7 +10,7 @@
   
   Macros provide the means to abstract common syntactical patterns in order to reduce boilerplate, and hence improving clearness of code, with all far-reaching consequences. A programming language empowering us to perform metaprogramming is rather a building material, because in fact we continue programming in terms of [embedded domain-specific languages], which are best suited at expressing our intention.
   
-  However, metaprogramming in C is quite castrated: preprocessor control expressions don't exist at all, [recursion is blocked], no support for arithmetic, collections, et cetera. koshmar-pp is a [metalanguage] addressing all of the aforementioned problems, and furthermore, is implemented directly in the terms of a standard-compliant C preprocessor.
+  However, metaprogramming in C is quite castrated: preprocessor control expressions don't exist at all, [recursion is blocked], no support for arithmetic, collections, et cetera. koshmar-pp is a [metalanguage] addressing all of the aforementioned problems, and furthermore, is implemented as a set of standard-compliant macros, thus avoiding the need in third-party code generators.
 </div>
 
 [embedded domain-specific languages]: https://en.wikipedia.org/wiki/Domain-specific_language
