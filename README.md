@@ -8,7 +8,7 @@
     <img src="https://img.shields.io/badge/docs-Doxygen-blue">
   </a>
  
- You're seeing a [metalanguage] bringing the power of full-scale [metaprogramming] to plain C, implemented only in the terms of the standard-compliant preprocessor.
+ koshmar-pp is a [metalanguage] bringing the power of full-scale [metaprogramming] to plain C, implemented only in the terms of the standard-compliant preprocessor.
 </div>
 
 [metaprogramming]: https://en.wikipedia.org/wiki/Metaprogramming
