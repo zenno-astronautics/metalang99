@@ -7,8 +7,8 @@
   <a href="https://hirrolot.github.io/koshmar-pp/">
     <img src="https://img.shields.io/badge/docs-Doxygen-blue">
   </a>
-  
-  Macros provide the means to abstract common syntactical patterns in order to reduce boilerplate, and hence improving clearness of code, with all far-reaching consequences. A programming language empowering us to perform metaprogramming is rather a building material because, in fact, we continue programming in terms of [embedded domain-specific languages] created by ourselves, which are best suited at expressing our intention.
+
+  Macros provide the means to abstract frequently occuring syntactical constructs in order to improve clearness of code, with all far-reaching consequences. What is more interesting is that a programming language empowering us to perform metaprogramming is rather a building material because, in fact, we continue programming in terms of [embedded domain-specific languages] created by ourselves, which are best suited at expressing our intention.
 
   However, metaprogramming in C is quite castrated: preprocessor control expressions don't exist at all, [recursion is blocked], no support for arithmetic, collections, et cetera. koshmar-pp is a [metalanguage] addressing all of the aforementioned problems, and furthermore, is implemented as a set of standard-compliant macros, thus avoiding the need for third-party code generators.
 </div>
