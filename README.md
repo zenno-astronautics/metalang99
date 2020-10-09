@@ -1,5 +1,4 @@
 <div align="center">
-  <img src="logo.png" width="450px">
   <h1>agony-pp</h1>
   <a href="https://github.com/Hirrolot/agony-pp/actions">
     <img src="https://github.com/Hirrolot/agony-pp/workflows/C/C++%20CI/badge.svg">
