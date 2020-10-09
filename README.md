@@ -8,8 +8,6 @@
   </a>
 </div>
 
-## A quick look
-
 > The dark side of the force is a pathway to many abilities, some considered to be unnatural.<br>&emsp;&emsp;<b>-- Darth Sidious</b>
 
 [domain-specific languages]: https://en.wikipedia.org/wiki/Domain-specific_language
