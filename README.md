@@ -7,7 +7,7 @@
 [recursion is blocked]: https://github.com/pfultz2/Cloak/wiki/C-Preprocessor-tricks,-tips,-and-idioms#recursion
 [metalanguage]: https://en.wikipedia.org/wiki/Metalanguage
 
-## Hightlights
+## Highlights
  - C99-compliant.
  - Embedded: agony-pp is merely a set of C macros. `#include <agony_pp.h>` and use it directly in your sources, without third-party tools.
  - No dependencies. Even the standard library.
