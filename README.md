@@ -6,3 +6,9 @@
 [domain-specific languages]: https://en.wikipedia.org/wiki/Domain-specific_language
 [recursion is blocked]: https://github.com/pfultz2/Cloak/wiki/C-Preprocessor-tricks,-tips,-and-idioms#recursion
 [metalanguage]: https://en.wikipedia.org/wiki/Metalanguage
+
+## Hightlights
+ - C99-compliant.
+ - Embedded: agony-pp is merely a set of C macros. You can use it directly in your sources, without third-party tools.
+ - No dependencies. Even the standard library.
+ - Precise [documentation](https://hirrolot.github.io/agony-pp/).
