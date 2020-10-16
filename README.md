@@ -7,7 +7,7 @@
 
 TODO: the main example (https://github.com/Hirrolot/insult/issues/1).
 
-Insult is an embedded [metalanguage] that facilitates [language-oriented programming] in pure C, a software-development paradigm in which problems are solved via [domain-specific languages]. It accomplishes the goal by extending the standard C preprocessor with high-level programming concepts to let us deal with [metaprogramming] on a large scale.
+Insult is a [metalanguage] embedded into plain C that facilitates [language-oriented programming], a software-development paradigm in which problems are solved via [domain-specific languages]. It accomplishes the goal by extending the standard C preprocessor with high-level programming concepts to let us deal with [metaprogramming] on a large scale.
 
 [domain-specific languages]: https://en.wikipedia.org/wiki/Domain-specific_language
 [recursion is blocked]: https://github.com/pfultz2/Cloak/wiki/C-Preprocessor-tricks,-tips,-and-idioms#recursion
