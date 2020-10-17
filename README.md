@@ -7,7 +7,7 @@
 
 TODO: the main example (https://github.com/Hirrolot/macrolop/issues/1).
 
-Macrolop is an embedded [metalanguage] that facilitates [language-oriented programming] in plain C -- instead of solving problems using overly liberal mechanisms of C, solve them via your own expressive and declarative [domain-specific languages]. Macrolop accomplishes its goal by extending the standard preprocessor with high-level programming constructs to let us deal with [metaprogramming] on a large scale.
+Macrolop is an embedded [metalanguage] that facilitates [language-oriented programming] in plain C -- define your own expressive and declarative [domain-specific languages]o to solve common tasks. Macrolop accomplishes its goal by extending the standard preprocessor with high-level programming constructs to let us deal with [metaprogramming] on a large scale.
 
 [domain-specific languages]: https://en.wikipedia.org/wiki/Domain-specific_language
 [recursion is blocked]: https://github.com/pfultz2/Cloak/wiki/C-Preprocessor-tricks,-tips,-and-idioms#recursion
