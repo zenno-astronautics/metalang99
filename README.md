@@ -7,7 +7,7 @@
 
 TODO: the main example (https://github.com/Hirrolot/macrolop/issues/1).
 
-Macrolop is a [metalanguage] on top of the C99 preprocessor that facilitates [language-oriented programming]. In Macrolop, programmers express their intention in terms of [domain-specific languages] provided as ordinary C libraries. No external tooling is required.
+Macrolop is a [metalanguage] on top of the C99 preprocessor aimed at [language-oriented programming]. In Macrolop, programmers express their intention in terms of [domain-specific languages] provided as ordinary C libraries. No external tooling is required.
 
 [domain-specific languages]: https://en.wikipedia.org/wiki/Domain-specific_language
 [recursion is blocked]: https://github.com/pfultz2/Cloak/wiki/C-Preprocessor-tricks,-tips,-and-idioms#recursion
