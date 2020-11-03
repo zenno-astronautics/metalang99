@@ -20,7 +20,9 @@ Macrolop is a [metalanguage] on top of the C99 preprocessor aimed at [language-o
  - No dependencies. Even the standard library.
  - Precise [documentation](https://hirrolot.github.io/macrolop/).
 
-## Supported paradigms-as-libraries
+## Supported libraries
+
+### Paradigms-as-libraries
 
 | Name | Paradigm | Status |
 |----------|----------|----------|
@@ -30,7 +32,7 @@ Macrolop is a [metalanguage] on top of the C99 preprocessor aimed at [language-o
 | [macrolop-sm] | [Automata-based programming] | Actively developed |
 | [macrolop-logic] | [Logic programming] | Actively developed |
 
-## Supported concepts-as-libraries
+### Concepts-as-libraries
 
 | Name | Concept | Status |
 |----------|----------|----------|
