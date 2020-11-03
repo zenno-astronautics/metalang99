@@ -29,6 +29,11 @@ Macrolop is a [metalanguage] on top of the C99 preprocessor aimed at [language-o
 | [macrolop-async] | [Asynchronous programming] | Actively developed |
 | [macrolop-sm] | [Automata-based programming] | Actively developed |
 | [macrolop-logic] | [Logic programming] | Actively developed |
+
+## Other libraries
+
+| Name | Concept | Status |
+|----------|----------|----------|
 | [macrolop-adt] | [Algebraic data types] | Actively developed |
 
 [macrolop-oop]: https://github.com/Hirrolot/macrolop-oop
