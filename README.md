@@ -30,7 +30,7 @@ Macrolop is a [metalanguage] on top of the C99 preprocessor aimed at [language-o
 | [macrolop-sm] | [Automata-based programming] | Actively developed |
 | [macrolop-logic] | [Logic programming] | Actively developed |
 
-## Other libraries
+## Supported concepts-as-libraries
 
 | Name | Concept | Status |
 |----------|----------|----------|
