@@ -19,7 +19,7 @@ Macrolop is a [metalanguage] on top of the C99 preprocessor aimed at [language-o
  - Just `#include <macrolop.h>` and use it directly in your sources, without third-party tools.
  - No dependencies. Even the standard library.
  - Precise [documentation](https://hirrolot.github.io/macrolop/).
- - [Formally defined syntax and semantics](spec/spec.pdf).
+ - [Specification](spec/spec.pdf) with formally defined syntax and semantics.
 
 ## Supported libraries
 
