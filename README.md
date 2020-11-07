@@ -27,7 +27,7 @@ Macrolop is a [metalanguage] on top of the C99 preprocessor aimed at [language-o
 |----------|----------|----------|
 | [macrolop-generic] | [Generic programming] | Actively developed |
 | [macrolop-adt] | [Algebraic data types] | Actively developed |
-| [macrolop-algeff] | [Algebraic effects and handlers] | Actively developed |
+| [macrolop-algeff] | [Algebraic effects] | Actively developed |
 
 [macrolop-generic]: https://github.com/Hirrolot/macrolop-generic
 [macrolop-adt]: https://github.com/Hirrolot/macrolop-adt
@@ -35,4 +35,4 @@ Macrolop is a [metalanguage] on top of the C99 preprocessor aimed at [language-o
 
 [Generic programming]: https://en.wikipedia.org/wiki/Generic_programming
 [Algebraic data types]: https://en.wikipedia.org/wiki/Algebraic_data_type
-[Algebraic effects and handlers]: https://www.eff-lang.org/handlers-tutorial.pdf
+[Algebraic effects]: https://www.eff-lang.org/handlers-tutorial.pdf
