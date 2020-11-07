@@ -23,37 +23,16 @@ Macrolop is a [metalanguage] on top of the C99 preprocessor aimed at [language-o
 
 ## Supported libraries
 
-### Paradigms-as-libraries
-
-| Name | Paradigm | Status |
-|----------|----------|----------|
-| [macrolop-oop] | [Object-oriented programming] | Actively developed |
-| [macrolop-generic] | [Generic programming] | Actively developed |
-| [macrolop-async] | [Asynchronous programming] | Actively developed |
-| [macrolop-sm] | [Automata-based programming] | Actively developed |
-| [macrolop-logic] | [Logic programming] | Actively developed |
-
-### Concepts-as-libraries
-
 | Name | Concept | Status |
 |----------|----------|----------|
+| [macrolop-generic] | [Generic programming] | Actively developed |
 | [macrolop-adt] | [Algebraic data types] | Actively developed |
 | [macrolop-algeff] | [Algebraic effects and handlers] | Actively developed |
 
-[macrolop-oop]: https://github.com/Hirrolot/macrolop-oop
 [macrolop-generic]: https://github.com/Hirrolot/macrolop-generic
-[macrolop-async]: https://github.com/Hirrolot/macrolop-async
-[macrolop-sm]: https://github.com/Hirrolot/macrolop-sm
-[macrolop-logic]: https://github.com/Hirrolot/macrolop-logic
-
 [macrolop-adt]: https://github.com/Hirrolot/macrolop-adt
 [macrolop-algeff]: https://github.com/Hirrolot/macrolop-algeff
 
-[Object-oriented programming]: https://en.wikipedia.org/wiki/Object-oriented_programming
 [Generic programming]: https://en.wikipedia.org/wiki/Generic_programming
-[Asynchronous programming]: https://en.wikipedia.org/wiki/Asynchrony_(computer_programming)
-[Automata-based programming]: https://en.wikipedia.org/wiki/Automata-based_programming
-[Logic programming]: https://en.wikipedia.org/wiki/Logic_programming
-
 [Algebraic data types]: https://en.wikipedia.org/wiki/Algebraic_data_type
 [Algebraic effects and handlers]: https://www.eff-lang.org/handlers-tutorial.pdf
