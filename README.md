@@ -26,18 +26,13 @@ Macrolop is a [metalanguage] on top of the C99 preprocessor aimed at [language-o
 | Name | Concept | Status |
 |----------|----------|----------|
 | [macrolop-generic] | [Generic programming] | Actively developed |
-| [macrolop-interface] | [Interfaces] | Actively developed |
 | [macrolop-adt] | [Algebraic data types] | Actively developed |
 | [macrolop-algeff] | [Algebraic effects] | Actively developed |
-| [macrolop-aux] | Some auxiliary macros | Actively developed |
 
 [macrolop-generic]: https://github.com/Hirrolot/macrolop-generic
-[macrolop-interface]: https://github.com/Hirrolot/macrolop-interface
 [macrolop-adt]: https://github.com/Hirrolot/macrolop-adt
 [macrolop-algeff]: https://github.com/Hirrolot/macrolop-algeff
-[macrolop-aux]: https://github.com/Hirrolot/macrolop-aux
 
 [Generic programming]: https://en.wikipedia.org/wiki/Generic_programming
-[Interfaces]: https://en.wikipedia.org/wiki/Interface_(computing)#Software_interfaces
 [Algebraic data types]: https://en.wikipedia.org/wiki/Algebraic_data_type
 [Algebraic effects]: https://www.eff-lang.org/handlers-tutorial.pdf
