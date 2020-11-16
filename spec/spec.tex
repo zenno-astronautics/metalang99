@@ -106,6 +106,8 @@ Notes:
 \begin{itemize}
     \item A body of a macro called using \texttt{call} must follow the grammar of
     Macrolop, otherwise it might result in a compilation error.
+    \item With the current implementation, at most $2^{14}$ reduction steps is
+    possible. After exceeding this limit, compilation will likely fail.
 \end{itemize}
 
 \end{document}
