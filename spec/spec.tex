@@ -101,6 +101,20 @@ The abstract machine executes configurations of the form $\langle k; acc; contro
     \end{align*}
 \end{figure}
 
+\begin{notation}[Reduction step]
+    $\to_1$ denotes a single step of reduction (computation).
+\end{notation}
+
+\begin{notation}[Concrete sequence]
+    $\overline{x}$ denotes a concrete sequence $x_1 \ldots x_n$. For example: \\
+    \texttt{v(abc) call(FOO, v(123)) v(u 8 9)}.
+\end{notation}
+
+\begin{notation}[Meta-variables]
+    \texttt{tok} denotes a single C preprocessor token, \texttt{term} is a term defined
+    by the grammar, \texttt{a} is a term used as an argument.
+\end{notation}
+
 Notes:
 
 \begin{itemize}
