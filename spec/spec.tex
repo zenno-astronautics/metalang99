@@ -7,9 +7,14 @@
 \usepackage{amsmath}
 \usepackage{geometry}
 \usepackage{ntheorem}
+\usepackage{biblatex}
+\usepackage{csquotes}
+\usepackage[english]{babel}
 
 \theoremstyle{break}
 \newtheorem{notation}{Notation}
+
+\addbibresource{references.bib}
 
 \geometry{margin=60px}
 \floatstyle{boxed}
@@ -21,6 +26,30 @@
 \date{\today}
 \author{Temirkhan Myrzamadi (a.k.a. Hirrolot)}
 \maketitle
+
+\abstract{
+Macrolop \cite{Macrolop} is a metalanguage on top of the standard C preprocessor aimed at
+language-oriented programming. With Macrolop, developers express their intention in terms
+of domain-specific languages provided as ordinary C libraries. One example is typext4c
+\cite{typext4c}, a header-only library implementing various type system extensions for
+pure C.
+
+The two main characteristics of this projects are:
+
+\begin{itemize}
+    \item \textbf{Embedded.} Macrolop is implemented as a set of standard-compliant C99 macros,
+    therefore it can be embedded directly in \texttt{*.c}/\texttt{*.h} source files without
+    introducing third-party code generators.
+
+    \item \textbf{General recursion.} The recursion mechanism is explicitly blocked by the
+    standard \cite{IsC99TuringComplete}. Contrary to Boost/Preprocessor \cite{BoostPreprocessor},
+    Macrolop provides general recursion as-is (up to a certain limit, see
+    \ref{ReductionSemantics}).
+\end{itemize}
+
+This document describes the formal syntax and semantics of the metalanguage. See
+the official documentation \cite{MacrolopDocs} for the accompanied standard library.
+}
 
 \tableofcontents
 
@@ -70,6 +99,7 @@ Notes:
 \end{notation}
 
 \section{Reduction Semantics}
+\label{ReductionSemantics}
 
 We define reduction semantics for Macrolop. The abstract machine executes configurations
 of the form $\langle k; acc; control \rangle$:
@@ -126,5 +156,7 @@ Notes:
     \item With the current implementation, at most $2^{14}$ reduction steps is
     possible. After exceeding this limit, compilation will likely fail.
 \end{itemize}
+
+\printbibliography
 
 \end{document}
