@@ -1,14 +1,14 @@
-\documentclass[a4paper, 12pt]{article}
+\documentclass[12pt]{article}
 
 \usepackage{hyperref}
 \usepackage{float}
 \usepackage{bussproofs}
 \usepackage{minted}
 \usepackage{amsmath}
-\usepackage{geometry}
 \usepackage{ntheorem}
 \usepackage{biblatex}
 \usepackage{csquotes}
+\usepackage{tabularx}
 \usepackage[english]{babel}
 
 \theoremstyle{break}
@@ -16,7 +16,6 @@
 
 \addbibresource{references.bib}
 
-\geometry{margin=60px}
 \floatstyle{boxed}
 \restylefloat{figure}
 
@@ -27,30 +26,13 @@
 \author{Temirkhan Myrzamadi (a.k.a. Hirrolot)}
 \maketitle
 
-\abstract{
-Macrolop \cite{Macrolop} is a metalanguage on top of the standard C preprocessor aimed at
-language-oriented programming. The idea is to solve problems in terms of concise
-domain-specific languages represented as software building blocks, leading to a clearer and safer
-design of APIs. Domain-specific languages built upon Macrolop range from purely utilitary,
-such as a unit testing framework, to foreign programming language constructs, such as algebraic
-data types and software interfaces \cite{typext4c}.
-
-The two main characteristics of this project are:
-
-\begin{itemize}
-    \item \textbf{Embedded.} Macrolop is implemented as a set of standard-compliant C99 macros,
-    therefore it can be embedded directly in \texttt{*.c}/\texttt{*.h} source files without
-    introducing third-party code generators.
-
-    \item \textbf{General recursion.} The recursion mechanism is explicitly blocked by the
-    standard \cite{IsC99TuringComplete}. Contrary to Boost/Preprocessor \cite{BoostPreprocessor},
-    Macrolop provides general recursion as-is (up to a certain limit, see
-    \ref{ReductionSemantics}).
-\end{itemize}
-
-This document describes the formal syntax and semantics of the metalanguage. See
-the official documentation \cite{MacrolopDocs} for the accompanied standard library.
-}
+\begin{abstract}
+This paper establishes formal grammar and semantics of Macrolop,
+a metalanguage aimed at language-oriented programming in C.
+See the official repository \cite{Macrolop} for
+the user-friendly overview and the official documentation \cite{MacrolopDocs}
+for the accompanied standard library.
+\end{abstract}
 
 \tableofcontents
 
@@ -115,7 +97,7 @@ of the form $\langle k; acc; control \rangle$:
     \item $acc$ is an accumulator, a sequence of already computed results.
 
     \item $control$ is a concrete sequence of terms upon which the abstract machine is
-    operating right now. For example: \texttt{call(FOO, v(123) v(456)) v(w 8) v(blah)}.
+    operating right now. For example: \texttt{call(FOO, v(123) \\ v(456)) v(w 8) v(blah)}.
 \end{itemize}
 
 And here are the computational rules:
@@ -123,18 +105,20 @@ And here are the computational rules:
 \begin{figure}[H]
     \caption{Computational rules}
 
-    \begin{align*}
-        (v): \ & \langle k; acc; v(\overline{tok}) \ term \ \overline{term'} \rangle & \to_1 &
-            \langle k; acc, \ \overline{tok}; term \ \overline{term'} \rangle \\
-        (v\mbox{-}end): \ & \langle k; acc; v(\overline{tok}) \rangle & \to_1 &
-            k(seq\mbox{-}extract(acc, \overline{tok})) \\
-        (op): \ & \langle k; acc; call(\overline{term}, \overline{a}) \ \overline{term'} \rangle & \to_1 &
-            \langle \langle k; acc; call(?, \overline{a}) \ \overline{term'} \rangle; (); \overline{term} \rangle \\
-        (args): \ & \langle k; acc; call(ident, \overline{a}) \ \overline{term} \rangle & \to_1 &
-            \langle \langle k; acc; ident(seq\mbox{-}comma\mbox{-}sep(?)) \ \overline{term} \rangle; (); \overline{a} \rangle \\
-        (start): \ & MACROLOP\_EVAL(\overline{term}) & \to_1 &
-            \langle halt; (); \overline{term} \rangle \\
-    \end{align*}
+    \small
+    \begin{itemize}
+        \item[(v)]: $\langle k; acc; v(\overline{tok}) \ term \ \overline{term'} \rangle \to_1
+            \langle k; acc, \ \overline{tok}; term \ \overline{term'} \rangle$
+        \item[(v-end)]: $\langle k; acc; v(\overline{tok}) \rangle \to_1
+            k(seq\mbox{-}extract(acc, \overline{tok}))$
+        \item[(op)]: $\langle k; acc; call(\overline{term}, \overline{a}) \ \overline{term'} \rangle \to_1
+            \langle \langle k; acc; call(?, \overline{a}) \ \overline{term'} \rangle; (); \overline{term} \rangle$
+        \item[(args)]: $\langle k; acc; call(ident, \overline{a}) \ \overline{term} \rangle \to_1$ \\
+            $\langle \langle k; acc; ident(seq\mbox{-}comma\mbox{-}sep(?)) \ \overline{term} \rangle; (); \overline{a} \rangle$
+        \item[(start)]: $MACROLOP\_EVAL(\overline{term}) \to_1
+            \langle halt; (); \overline{term} \rangle$
+    \end{itemize}
+    \normalsize
 \end{figure}
 
 \begin{notation}[Reduction step; concrete sequence; meta-variables]
@@ -142,7 +126,7 @@ And here are the computational rules:
         \item $\to_1$ denotes a single step of reduction (computation).
 
         \item $\overline{x}$ denotes a concrete sequence $x_1 \ldots x_n$. For example:
-        \texttt{v(abc) call(FOO, v(123)) v(u 8 9)}.
+        \texttt{v(abc) \\ call(FOO, v(123)) v(u 8 9)}.
 
         \item \texttt{tok} denotes a single C preprocessor token, \texttt{term} is a term defined
     by the grammar, \texttt{a} is a term used as an argument.
