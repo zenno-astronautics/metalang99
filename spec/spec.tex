@@ -6,8 +6,9 @@
 \usepackage{minted}
 \usepackage{amsmath}
 \usepackage{geometry}
-\usepackage{amsthm}
+\usepackage{ntheorem}
 
+\theoremstyle{break}
 \newtheorem{notation}{Notation}
 
 \geometry{margin=60px}
@@ -54,22 +55,24 @@ Notes:
     \item \texttt{call} accepts arguments without a separator.
 \end{itemize}
 
-\section{Reduction Semantics}
-
-We define reduction semantics for Macrolop. First of all, take into consideration the
-following notation for sequences:
+\section{Notations}
 
 \begin{notation}[Sequences]
-    A sequence has the form $(x_1, \ldots, x_n)$. $()$ denotes the empty sequence.
-    An element can be appended by comma: if $a = (1, 2, 3)$ and $b = 4$, then
-    $a, b = (1, 2, 3, 4)$.
-    $seq\mbox{-}extract$ extracts elements from a sequence without a separator:
-    $seq\mbox{-}extract((a, b, c)) = a \ b \ c$.
-    $seq\mbox{-}comma\mbox{-}sep$ extracts elements from a sequence separated by comma: \\
-    $seq\mbox{-}comma\mbox{-}sep((a, b, c)) = a, b, c$. 
+    \begin{enumerate}
+        \item A sequence has the form $(x_1, \ldots, x_n)$.
+        \item $()$ denotes the empty sequence.
+        \item An element can be appended by comma: if $a = (1, 2, 3)$ and $b = 4$, then $a, b = (1, 2, 3, 4)$.
+        \item \texttt{seq-extract} extracts elements from a sequence without a separator:
+        \texttt{seq-extract((a, b, c)) = a \ b \ c}.
+        \item \texttt{seq-comma-sep} extracts elements from a sequence separated by comma: \\
+        \texttt{seq-comma-sep((a, b, c)) = a, b, c}.
+    \end{enumerate}
 \end{notation}
 
-The abstract machine executes configurations of the form $\langle k; acc; control \rangle$:
+\section{Reduction Semantics}
+
+We define reduction semantics for Macrolop. The abstract machine executes configurations
+of the form $\langle k; acc; control \rangle$:
 
 \begin{itemize}
     \item $k$ is a continuation of the form $\langle k; acc; control \rangle$, where
@@ -83,6 +86,8 @@ The abstract machine executes configurations of the form $\langle k; acc; contro
     \item $control$ is a concrete sequence of terms upon which the abstract machine is
     operating right now. For example: \texttt{call(FOO, v(123) v(456)) v(w 8) v(blah)}.
 \end{itemize}
+
+And here are the computational rules:
 
 \begin{figure}[H]
     \caption{Computational rules}
@@ -101,18 +106,16 @@ The abstract machine executes configurations of the form $\langle k; acc; contro
     \end{align*}
 \end{figure}
 
-\begin{notation}[Reduction step]
-    $\to_1$ denotes a single step of reduction (computation).
-\end{notation}
+\begin{notation}[Reduction step; concrete sequence; meta-variables]
+    \begin{enumerate}
+        \item $\to_1$ denotes a single step of reduction (computation).
 
-\begin{notation}[Concrete sequence]
-    $\overline{x}$ denotes a concrete sequence $x_1 \ldots x_n$. For example: \\
-    \texttt{v(abc) call(FOO, v(123)) v(u 8 9)}.
-\end{notation}
+        \item $\overline{x}$ denotes a concrete sequence $x_1 \ldots x_n$. For example:
+        \texttt{v(abc) call(FOO, v(123)) v(u 8 9)}.
 
-\begin{notation}[Meta-variables]
-    \texttt{tok} denotes a single C preprocessor token, \texttt{term} is a term defined
+        \item \texttt{tok} denotes a single C preprocessor token, \texttt{term} is a term defined
     by the grammar, \texttt{a} is a term used as an argument.
+    \end{enumerate}
 \end{notation}
 
 Notes:
