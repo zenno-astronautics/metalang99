@@ -66,22 +66,7 @@ Notes:
     \item \texttt{call} accepts arguments without a separator.
 \end{itemize}
 
-\section{Notations}
-
-\begin{notation}[Sequences]
-    \begin{enumerate}
-        \item A sequence has the form $(x_1, \ldots, x_n)$.
-        \item $()$ denotes the empty sequence.
-        \item An element can be appended by comma: if $a = (1, 2, 3)$ and $b = 4$, then $a, b = (1, 2, 3, 4)$.
-        \item \texttt{seq-extract} extracts elements from a sequence without a separator:
-        \texttt{seq-extract((a, b, c)) = a \ b \ c}.
-        \item \texttt{seq-comma-sep} extracts elements from a sequence separated by comma: \\
-        \texttt{seq-comma-sep((a, b, c)) = a, b, c}.
-    \end{enumerate}
-\end{notation}
-
 \section{Reduction Semantics}
-\label{ReductionSemantics}
 
 We define reduction semantics for Macrolop. The abstract machine executes configurations
 of the form $\langle k; acc; control \rangle$:
@@ -93,7 +78,8 @@ of the form $\langle k; acc; control \rangle$:
     then $k(v(ghi))$ is $\langle k'; (1, 2, 3); v(abc) \ v(ghi) \rangle$. A special
     continuation $halt$ terminates the abstract machine with provided result.
 
-    \item $acc$ is an accumulator, a sequence of already computed results.
+    \item $acc$ is an accumulator, a sequence \ref{SequencesNotation} of already computed
+    results.
 
     \item $control$ is a concrete sequence of terms upon which the abstract machine is
     operating right now. For example: \texttt{call(FOO, v(123) \\ v(456)) v(w 8) v(blah)}.
@@ -105,31 +91,53 @@ And here are the computational rules:
     \caption{Computational rules}
 
     \small
-    \begin{itemize}
-        \item[(v)]: $\langle k; acc; v(\overline{tok}) \ term \ \overline{term'} \rangle \to_1
-            \langle k; acc, \ \overline{tok}; term \ \overline{term'} \rangle$
-        \item[(v-end)]: $\langle k; acc; v(\overline{tok}) \rangle \to_1
-            k(seq\mbox{-}extract(acc, \overline{tok}))$
-        \item[(op)]: $\langle k; acc; call(\overline{term}, \overline{a}) \ \overline{term'} \rangle \to_1
-            \langle \langle k; acc; call(?, \overline{a}) \ \overline{term'} \rangle; (); \overline{term} \rangle$
-        \item[(args)]: $\langle k; acc; call(ident, \overline{a}) \ \overline{term} \rangle \to_1$ \\
-            $\langle \langle k; acc; ident(seq\mbox{-}comma\mbox{-}sep(?)) \ \overline{term} \rangle; (); \overline{a} \rangle$
-        \item[(start)]: $MACROLOP\_EVAL(\overline{term}) \to_1
-            \langle halt; (); \overline{term} \rangle$
-    \end{itemize}
+    \begin{align*}
+        (v): \ & \langle k; acc; v(\overline{tok}) \ t \ \overline{t'} \rangle & \to_1 &
+            \langle k; acc, \ \overline{tok}; t \ \overline{t'} \rangle \\
+        (v\mbox{-}end): \ & \langle k; acc; v(\overline{tok}) \rangle & \to_1 &
+            k(unseq(acc, \overline{tok})) \\
+        (op): \ & \langle k; acc; call(\overline{t}, \overline{a}) \ \overline{t'} \rangle & \to_1 &
+            \langle \langle k; acc; call(?, \overline{a}) \ \overline{t'} \rangle; (); \overline{t} \rangle \\
+        (args): \ & \langle k; acc; call(ident, \overline{a}) \ \overline{t} \rangle & \to_1 &
+            \langle \langle k; acc; ident(unseq\mbox{-}cs(?)) \ \overline{t} \rangle; (); \overline{a} \rangle \\
+        (start): \ & MACROLOP\_EVAL(\overline{t}) & \to_1 &
+            \langle halt; (); \overline{t} \rangle
+    \end{align*}
     \normalsize
 \end{figure}
 
-\begin{notation}[Reduction step; concrete sequence; meta-variables]
+\label{SequencesNotation}
+\begin{notation}[Sequences]
     \begin{enumerate}
-        \item $\to_1$ denotes a single step of reduction (computation).
-
-        \item $\overline{x}$ denotes a concrete sequence $x_1 \ldots x_n$. For example:
-        \texttt{v(abc) \\ call(FOO, v(123)) v(u 8 9)}.
-
-        \item \texttt{tok} denotes a single C preprocessor token, \texttt{term} is a term defined
-    by the grammar, \texttt{a} is a term used as an argument.
+        \item A sequence has the form $(x_1, \ldots, x_n)$.
+        \item $()$ denotes the empty sequence.
+        \item An element can be appended by comma: if $a = (1, 2, 3)$ and $b = 4$, then $a, b = (1, 2, 3, 4)$.
+        \item \texttt{unseq} extracts elements from a sequence without a separator:
+        \texttt{unseq( \\ (a, b, c)) = a b c}.
+        \item \texttt{unseq-cs} extracts elements from a sequence separated by comma: \\
+        \texttt{unseq-cs((a, b, c)) = a, b, c}.
     \end{enumerate}
+\end{notation}
+
+\begin{notation}[Reduction step]
+    $\to_1$ denotes a single step of reduction (computation).
+\end{notation}
+
+\begin{notation}[Concrete sequence]
+    $\overline{x}$ denotes a concrete sequence $x_1 \ldots x_n$. For example:
+    \texttt{v(abc) call(FOO, v(123)) v(u 8 9)}.
+\end{notation}
+
+\begin{notation}[Meta-variables]
+    \ \\
+    \begin{tabular}{|c|c|}
+        \hline
+        \texttt{tok} & C preprocessor token \\
+        \texttt{ident} & C preprocessor identifier \\
+        \texttt{t} & Macrolop term \\
+        \texttt{a} & Macrolop term used as an argument \\
+        \hline
+    \end{tabular}
 \end{notation}
 
 Notes:
