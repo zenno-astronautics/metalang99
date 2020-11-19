@@ -43,7 +43,7 @@ official repository \cite{Macrolop} for the user-friendly overview and the offic
     \caption{Grammar rules}
 
 \begin{minted}{bnf}
-<eval> ::= "MACROLOP_EVAL(" { <term> }* ")" ;
+<eval> ::= "MACROLOP_EVAL(" { <term> }+ ")" ;
 
 <term> ::= "call(" <op> "," { <term> }* ")"
          | "v(" <preprocessor-token-list> ")" ;
@@ -53,7 +53,7 @@ official repository \cite{Macrolop} for the user-friendly overview and the offic
 
 \end{figure}
 
-A metaprogram in Macrolop consists of a (possibly empty) sequence of terms, each of which
+A metaprogram in Macrolop consists of a non-empty sequence of terms, each of which
 is either a macro call or just a value.
 
 Notes:
@@ -69,20 +69,21 @@ Notes:
 \section{Reduction Semantics}
 
 We define reduction semantics for Macrolop. The abstract machine executes configurations
-of the form $\langle k; acc; control \rangle$:
+of the form $\langle K; A; C \rangle$:
 
 \begin{itemize}
-    \item $k$ is a continuation of the form $\langle k; acc; control \rangle$, where
-    $control$ include the $?$ sign, which will be substituted with a result after a
-    continuation is called. For example: let $k = \langle k'; (1, 2, 3); v(abc) \ ? \rangle$,
-    then $k(v(ghi))$ is $\langle k'; (1, 2, 3); v(abc) \ v(ghi) \rangle$. A special
+    \item $K$ is a continuation of the form $\langle K; A; C \rangle$, where
+    $C$ include the $?$ sign, which will be substituted with a result after a
+    continuation is called. For example: let $K = \langle K'; (1, 2, 3); v(abc) \ ? \rangle$,
+    then $K(v(ghi))$ is $\langle K'; (1, 2, 3); v(abc) \ v(ghi) \rangle$. A special
     continuation $halt$ terminates the abstract machine with provided result.
 
-    \item $acc$ is an accumulator, a sequence \ref{SequencesNotation} of already computed
+    \item $A$ is an accumulator, a sequence \ref{SequencesNotation} of already computed
     results.
 
-    \item $control$ is a concrete sequence of terms upon which the abstract machine is
-    operating right now. For example: \texttt{call(FOO, v(123) \\ v(456)) v(w 8) v(blah)}.
+    \item $C$ (control) is a concrete sequence \ref{ConcreteSequenceNotation} of terms
+    upon which the abstract machine is operating right now. For example:
+    \texttt{call(FOO, v(123) \\ v(456)) v(w 8) v(blah)}.
 \end{itemize}
 
 And here are the computational rules:
@@ -90,24 +91,22 @@ And here are the computational rules:
 \begin{figure}[H]
     \caption{Computational rules}
 
-    \small
     \begin{align*}
-        (v): \ & \langle k; acc; v(\overline{tok}) \ t \ \overline{t'} \rangle & \to_1 &
-            \langle k; acc, \ \overline{tok}; t \ \overline{t'} \rangle \\
-        (v\mbox{-}end): \ & \langle k; acc; v(\overline{tok}) \rangle & \to_1 &
-            k(unseq(acc, \overline{tok})) \\
-        (op): \ & \langle k; acc; call(\overline{t}, \overline{a}) \ \overline{t'} \rangle & \to_1 &
-            \langle \langle k; acc; call(?, \overline{a}) \ \overline{t'} \rangle; (); \overline{t} \rangle \\
-        (args): \ & \langle k; acc; call(ident, \overline{a}) \ \overline{t} \rangle & \to_1 &
-            \langle \langle k; acc; ident(unseq\mbox{-}cs(?)) \ \overline{t} \rangle; (); \overline{a} \rangle \\
-        (start): \ & MACROLOP\_EVAL(\overline{t}) & \to_1 &
-            \langle halt; (); \overline{t} \rangle
+        (v): \ & \langle K; A; v(\overline{tok}) \ t \ \overline{t'} \rangle & \to_1 &
+            \langle K; A, \ \overline{tok}; t \ \overline{t'} \rangle \\
+        (v\mbox{-}end): \ & \langle K; A; v(\overline{tok}) \rangle & \to_1 &
+            K(unseq(A, \overline{tok})) \\
+        (op): \ & \langle K; A; call(\overline{t}, \overline{a}) \ \overline{t'} \rangle & \to_1 &
+            \langle \langle K; A; call(?, \overline{a}) \ \overline{t'} \rangle; (); \overline{t} \rangle \\
+        (args): \ & \langle K; A; call(ident, \overline{a}) \ \overline{t} \rangle & \to_1 \\
+            & \langle \langle K; A; ident(unseq\mbox{-}cs(?)) \ \overline{t} \rangle; (); \overline{a} \rangle \\
+        (start): \ & MACROLOP\_EVAL(t \ \overline{t'}) & \to_1 &
+            \langle halt; (); t \ \overline{t'} \rangle
     \end{align*}
-    \normalsize
 \end{figure}
 
-\label{SequencesNotation}
 \begin{notation}[Sequences]
+    \label{SequencesNotation}
     \begin{enumerate}
         \item A sequence has the form $(x_1, \ldots, x_n)$.
         \item $()$ denotes the empty sequence.
@@ -124,6 +123,7 @@ And here are the computational rules:
 \end{notation}
 
 \begin{notation}[Concrete sequence]
+    \label{ConcreteSequenceNotation}
     $\overline{x}$ denotes a concrete sequence $x_1 \ldots x_n$. For example:
     \texttt{v(abc) call(FOO, v(123)) v(u 8 9)}.
 \end{notation}
@@ -140,12 +140,21 @@ And here are the computational rules:
     \end{tabular}
 \end{notation}
 
+The rules are fairly simple: a concrete sequence of terms provided into
+\texttt{MACROLOP\_EVAL} is evaluated sequentially till the end; a function's arguments
+are evaluated before the function is applied, e.g. Macrolop follows applicative
+evaluation strategy. When there's no more terms to evaluate, the result is pasted
+where \texttt{MACROLOP\_EVAL} has been invoked.
+
 Notes:
 
 \begin{itemize}
-    \item A body of a macro called using \texttt{call} must follow the grammar of
-    Macrolop, otherwise it might result in a compilation error.
-    \item With the current implementation, at most $2^{14}$ reduction steps is
+    \item Look at $(args)$. Macrolop generates a usual C-style macro invocation with
+    fully evaluated arguments, which will be then expanded by the C preprocessor, resulting
+    in yet another concrete sequence of Macrolop terms to be evaluated by the computational
+    rules. \par Therefore, an expansion of $call(\overline{t}, \overline{a})$
+    must match the Macrolop grammar, otherwise it might result in a compilation error.
+    \item With the current implementation, at most $2^{14}$ reduction steps are
     possible. After exceeding this limit, compilation will likely fail.
 \end{itemize}
 
