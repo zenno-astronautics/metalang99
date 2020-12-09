@@ -2,6 +2,7 @@
 
 # Macrolop
 [![CI](https://github.com/Hirrolot/macrolop/workflows/C/C++%20CI/badge.svg)](https://github.com/Hirrolot/macrolop/actions)
+[![docs](https://img.shields.io/badge/docs-github.io-blue)](https://hirrolot.github.io/macrolop/)
 
 > The dark side of the force is a pathway to many abilities, some considered to be unnatural.<br>&emsp;&emsp;<b>-- Darth Sidious</b>
 
