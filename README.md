@@ -7,16 +7,13 @@
 
 TODO: the main example (https://github.com/Hirrolot/macrolop/issues/1).
 
-Macrolop is a [metalanguage] on top of the C99 preprocessor aimed at [language-oriented programming]. In Macrolop, programmers express their intention in terms of [domain-specific languages] provided as ordinary C libraries. No external tooling is required.
+Macrolop allows you to create and use embedded [domain-specific languages] in pure C, via the preprocessor.
 
-[metalanguage]: https://en.wikipedia.org/wiki/Metalanguage
-[language-oriented programming]: https://en.wikipedia.org/wiki/Language-oriented_programming
 [domain-specific languages]: https://en.wikipedia.org/wiki/Domain-specific_language
-[metaprogramming]: https://en.wikipedia.org/wiki/Metaprogramming
 
 ## Highlights
  - C99-compliant.
- - Just `#include <macrolop.h>` and use it directly in your sources, without third-party tools.
+ - `#include <macrolop.h>` is everything you need.
  - No dependencies. Even the standard library.
  - Precise [documentation](https://hirrolot.github.io/macrolop/).
  - [Specification](spec/spec.pdf) with formally defined syntax and semantics.
@@ -25,4 +22,4 @@ Macrolop is a [metalanguage] on top of the C99 preprocessor aimed at [language-o
 
 Q: **What "Macrolop" means?**
 
-A: "Macrolop" = **M**acro + **l**anguage-**o**riented **p**rogramming.
+A: "Macrolop" = **M**acro + **l**anguage-**o**riented **p**rogramming ([Wiki](https://en.wikipedia.org/wiki/Language-oriented_programming)).
