@@ -22,4 +22,4 @@ Macrolop allows you to create and use embedded [domain-specific languages] in pu
 
 Q: **What "Macrolop" means?**
 
-A: "Macrolop" = **M**acro + **l**anguage-**o**riented **p**rogramming ([Wiki](https://en.wikipedia.org/wiki/Language-oriented_programming)).
+A: "Macrolop" = **M**acro + **l**anguage-**o**riented **p**rogramming ([Wikipedia](https://en.wikipedia.org/wiki/Language-oriented_programming)).
