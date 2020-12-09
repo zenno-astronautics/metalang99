@@ -9,6 +9,8 @@ TODO: the main example (https://github.com/Hirrolot/macrolop/issues/1).
 
 Macrolop allows you to create and use embedded [domain-specific languages] in pure C, via the preprocessor.
 
+Everything you see happens at compile-time.
+
 [domain-specific languages]: https://en.wikipedia.org/wiki/Domain-specific_language
 
 ## Highlights
