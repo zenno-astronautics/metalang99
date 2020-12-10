@@ -164,23 +164,22 @@ The following notations are used:
     \end{tabular}
 \end{notation}
 
+The rules are fairly simple: concrete sequence of terms provided into \\
+\texttt{MACROLOP\_EVAL} is evaluated sequentially till the end. A function's arguments
+are evaluated before the function is applied, e.g. Macrolop follows applicative
+evaluation strategy \cite{ApplicativeEvaluationStrategy}. When there's no more terms
+to evaluate, the result is pasted where \texttt{MACROLOP\_EVAL} has been invoked.
+
 Notes:
 
 \begin{itemize}
     \item Look at $(args)$. Macrolop generates a usual C-style macro invocation with
     fully evaluated arguments, which will be then expanded by the C preprocessor, resulting
     in yet another concrete sequence of Macrolop terms to be evaluated by the computational
-    rules. \par Therefore, an expansion of $call(\overline{t}, \overline{a})$
-    must match the Macrolop grammar, otherwise it might result in a compilation error.
+    rules.
     \item With the current implementation, at most $2^{14}$ reduction steps are
     possible. After exceeding this limit, compilation will likely fail.
 \end{itemize}
-
-The rules are fairly simple: a concrete sequence of terms provided into \\
-\texttt{MACROLOP\_EVAL} is evaluated sequentially till the end; a function's arguments
-are evaluated before the function is applied, e.g. Macrolop follows applicative
-evaluation strategy \cite{ApplicativeEvaluationStrategy}. When there's no more terms
-to evaluate, the result is pasted where \texttt{MACROLOP\_EVAL} has been invoked.
 
 The essence of the Macrolop metalanguage is that it allows recursive macro calls. But
 to be precise, it allows only indirect recursion. First define the $\twoheadrightarrow$
@@ -207,7 +206,7 @@ Then consider these two cases:
     e.g. can be invoked again.
 \end{itemize}
 
-Now let's move to the examples of reduction. Take the following code:
+Now let's move on to the examples of reduction. Take the following code:
 
 \begin{minted}{c}
 #define X(op)        call(op, v(123))
