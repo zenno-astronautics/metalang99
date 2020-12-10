@@ -68,15 +68,16 @@ Notes:
     \item \texttt{call} accepts \texttt{op} either as an identifier or as a non-empty
     sequence of terms that reduces to an identifier.
     \item \texttt{call} accepts arguments without a separator. This is intentional: it lets
-    arguments be generated programmatically without worrying about separators (for
-    instance, ensuring that there's no separator after the last argument).
+    all arguments be generated uniformly, unlike separation by commas where the last argument
+    need no comma after itself.
 \end{itemize}
 
 However, the \texttt{call} syntax hurts IDE support: bad code formatting, no parameters
-documentation hightlighting, et cetera. The workaround is to define a wrapper around
+documentation highlighting, et cetera. The workaround is to define a wrapper around
 an implementation macro like this:
 
 \begin{minted}{c}
+/// A documentation string here.
 #define FOO(a, b, c) FOO_REAL(a b c)
 #define FOO_REAL(a, b, c) // The actual implementation here.
 \end{minted}
@@ -94,7 +95,7 @@ of the form $\langle K; A; C \rangle$:
 \begin{itemize}
     \item $K$ is a continuation of the form $\langle K; A; C \rangle$, where
     $C$ includes the $?$ sign denoting a result passed into a continuation.
-    For example: let $K = \langle K'; (1, 2, 3); v(abc) \\ ? \rangle$,
+    For example, let $K$ be $\langle K'; (1, 2, 3); v(abc) \\ ? \rangle$,
     then $K(v(ghi))$ is $\langle K'; (1, 2, 3); v(abc) \ v(ghi) \rangle$. A special
     continuation $halt$ terminates the abstract machine with provided result.
 
@@ -125,6 +126,12 @@ And here are the computational rules:
     \end{align*}
 \end{figure}
 
+The following notations are used:
+
+\begin{notation}[Reduction step]
+    $\to$ denotes a single step of reduction (computation).
+\end{notation}
+
 \begin{notation}[Sequences]
     \label{SequencesNotation}
     \begin{enumerate}
@@ -133,11 +140,10 @@ And here are the computational rules:
         \item An element can be appended by comma: if $a = (1, 2, 3)$ and $b = 4$, then $a, b = (1, 2, 3, 4)$.
         \item \texttt{unseq} extracts elements from a sequence without a separator: \\
         \texttt{unseq((a, b, c)) = a b c}.
+        \item \texttt{comma-sep} places \texttt{v(,)} between terms in a concrete sequence of terms:\\
+        \texttt{comma-sep(v(123) call(FOO, v(a)) call(BAR, v(b)))} results in
+        \texttt{v(123) v(,) call(FOO, v(a)) v(,) call(BAR, v(b))}.
     \end{enumerate}
-\end{notation}
-
-\begin{notation}[Reduction step]
-    $\to$ denotes a single step of reduction (computation).
 \end{notation}
 
 \begin{notation}[Concrete sequence]
@@ -173,11 +179,20 @@ Notes:
 The rules are fairly simple: a concrete sequence of terms provided into \\
 \texttt{MACROLOP\_EVAL} is evaluated sequentially till the end; a function's arguments
 are evaluated before the function is applied, e.g. Macrolop follows applicative
-evaluation strategy. When there's no more terms to evaluate, the result is pasted
-where \texttt{MACROLOP\_EVAL} has been invoked.
+evaluation strategy \cite{ApplicativeEvaluationStrategy}. When there's no more terms
+to evaluate, the result is pasted where \texttt{MACROLOP\_EVAL} has been invoked.
 
 The essence of the Macrolop metalanguage is that it allows recursive macro calls. But
-to be precise, it allows only indirect recursion. Consider these two cases:
+to be precise, it allows only indirect recursion. First define the $\twoheadrightarrow$
+meta-operator (resembles that in lambda calculi):
+
+\begin{notation}[Multiple reduction steps]
+    $\twoheadrightarrow$ denotes one or more single evaluation steps, e.g.
+    $\overline{t} \twoheadrightarrow \overline{t'}$ is the same as
+    $\overline{t} \to \ldots \to \overline{t'}$.
+\end{notation}
+
+Then consider these two cases:
 
 \begin{itemize}
     \item Direct recursion: $call(X, \overline{tok}) \to \overline{t}$, where
@@ -191,12 +206,6 @@ to be precise, it allows only indirect recursion. Consider these two cases:
     contains $X$. Then this $X$ will \textbf{not} be blocked by the C preprocessor,
     e.g. can be invoked again.
 \end{itemize}
-
-\begin{notation}[Multiple reduction steps]
-    $\twoheadrightarrow$ denotes one or more single evaluation steps, e.g.
-    $\overline{t} \twoheadrightarrow \overline{t'}$ is the same as
-    $\overline{t} \to \ldots \to \overline{t'}$.
-\end{notation}
 
 Now let's move to the examples of reduction. Take the following code:
 
@@ -221,7 +230,7 @@ See how \texttt{call(X, v(CALL\_X))} is evaluated:
     \downarrow (args) \\
     \langle \langle halt; (); CALL\_X(?) \rangle; (); v(123) \rangle \\
     \downarrow (v\mbox{-}end) \\
-    \langle halt; (); call(X, v(ID)) \langle \\
+    \langle halt; (); call(X, v(ID)) \rangle \\
     \downarrow (args) \\
     \langle \langle halt; (); X(?) \rangle; (); v(ID) \rangle \\
     \downarrow (v\mbox{-}end) \\
@@ -268,6 +277,7 @@ I therefore recommend to use only primitive C-style macros (e.g. for performance
 reasons or because of you cannot express them in Macrolop).
 \end{itemize}
 
+\emergencystretch=1em
 \printbibliography
 
 \end{document}
