@@ -21,6 +21,15 @@ Q: **What "Macrolop" means?**
 
 A: "Macrolop" = **M**acro + **l**anguage-**o**riented **p**rogramming ([Wikipedia](https://en.wikipedia.org/wiki/Language-oriented_programming)).
 
+Q: **Why C and not C++/Rust/whatever else?**
+
+For instance:
+
+ - Your requirements dictate to use C.
+ - Your target architecture does not support other high-level languages.
+ - Your project is already written in C.
+ - ...
+
 Q: **Why formal specification?**
 
 A: Because it has the following advantages:
