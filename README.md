@@ -27,7 +27,7 @@ For instance:
 
  - Your company dictates to use C.
  - Your target architecture does not support other high-level languages.
- - Your project is already written in C.
+ - Your code base is already written in C.
  - ...
 
 Q: **Why formal specification?**
