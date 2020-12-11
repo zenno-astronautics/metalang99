@@ -25,7 +25,7 @@ Q: **Why C and not C++/Rust/whatever else?**
 
 For instance:
 
- - Your requirements dictate to use C.
+ - Your company's requirements dictate to use C.
  - Your target architecture does not support other high-level languages.
  - Your project is already written in C.
  - ...
