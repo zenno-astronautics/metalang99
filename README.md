@@ -23,7 +23,7 @@ A: "Macrolop" = **M**acro + **l**anguage-**o**riented **p**rogramming ([Wikipedi
 
 Q: **Why C and not C++/Rust/whatever else?**
 
-For instance:
+A: For instance:
 
  - Your company dictates to use C.
  - Your target architecture does not support other high-level languages.
@@ -32,7 +32,7 @@ For instance:
 
 Q: **Why formal specification?**
 
-A: Because it has the following advantages:
+A:
 
  - **Formal proofs.** With a mathematical model it becomes possible to proof things about Macrolop formally.
 
