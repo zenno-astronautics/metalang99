@@ -46,7 +46,7 @@ EPILEPSY_ASSERT_EQ(SUM(TREE), v(28));
 int main(void) {}
 ```
 
-Epilepsy is a functional programming language that executes on any C99/C++11-compliant preprocessor. It has basic and compound data types, control expressions, collections, and other stuff, thereby serving as a framework for metaprogramming.
+Epilepsy is a functional programming language that executes on any C99/C++11-compliant preprocessor. It provides basic and compound data types, control expressions, collections, boolean logic, and other stuff, thereby serving as a framework for metaprogramming.
 
 ## Motivation
 
