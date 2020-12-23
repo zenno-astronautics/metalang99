@@ -177,11 +177,11 @@ machine executes configurations of the form $\langle K; F; A; C \rangle$:
     \label{ReductionSemantics}
 \end{figure}
 
-That is, Epilepsy follows applicative evaluation strategy \cite{ApplicativeEvaluationStrategy}.
-
 Notes:
 
 \begin{itemize}
+    \item Epilepsy follows applicative evaluation strategy \cite{ApplicativeEvaluationStrategy}.
+
     \item Look at $(args)$. Epilepsy generates a usual C-style macro invocation with
     fully evaluated arguments, which will be then expanded by the preprocessor, resulting
     in yet another concrete sequence of Epilepsy terms to be evaluated by the computational
