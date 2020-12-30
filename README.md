@@ -10,7 +10,7 @@
 
 TODO: the main example.
 
-Epilepsy enables you to `#define` and code in terms of languages that coincide with a problem domain. This way, secondary details get obliterated, hard mental operations on a syntax level are left to machines -- your code directly reflects the essence of a task, leading towards a more maintainable and reliable design.
+Epilepsy enables you to `#define` and solve problems in terms of languages that [coincide with a problem domain](https://en.wikipedia.org/wiki/Language-oriented_programming). This way, secondary details get obliterated, hard mental operations on a syntax level are left to machines -- your code directly reflects the essence of a task, leading towards a more maintainable and reliable design.
 
 ## Overview
 
