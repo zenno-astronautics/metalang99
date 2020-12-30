@@ -10,9 +10,7 @@
 
 TODO: the main example.
 
-Epilepsy is a functional language aimed at C99/C++11 preprocessor metaprogramming.
-
-Its goal is to facilitate [language-oriented programming] in pure C: you `#define` [domain-specific languages] whose syntax reflects your problem domain, leading to more expressive and robust code.
+Epilepsy is a functional language aimed at [language-oriented programming] in pure C: you `#define` [domain-specific languages] whose syntax reflects your problem domain, leading to more expressive and robust code.
 
 [language-oriented programming]: https://en.wikipedia.org/wiki/Language-oriented_programming
 [domain-specific languages]: https://en.wikipedia.org/wiki/Domain-specific_language
