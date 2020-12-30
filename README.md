@@ -10,7 +10,7 @@
 
 TODO: the main example.
 
-Epilepsy is a tool for [language-oriented programming]: you `#define` and codify with small languages that _reflect_ your problem domain, leading to more expressive and reliable design.
+Epilepsy is a tool for [language-oriented programming]: you are encouraged to solve problems via small languages that _reflect_ your problem domain rather than using redundant mechanisms of a general-purpose programming language, leading to more expressive and reliable design.
 
 [language-oriented programming]: https://en.wikipedia.org/wiki/Language-oriented_programming
 
