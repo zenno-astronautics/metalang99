@@ -10,15 +10,7 @@
 
 TODO: the main example.
 
-Epilepsy is a tool for [language-oriented programming]: rather than (ab)using overly redundant mechanisms of a general-purpose programming language, you _reflect_ the problem domain in terms of small languages each addressing a specific task, leading towards a more expressive and reliable design.
-
-[language-oriented programming]: https://en.wikipedia.org/wiki/Language-oriented_programming
-
-## Motivation
-
-Epilepsy allows you to create and use embedded [domain-specific languages].
-
-[domain-specific languages]: https://en.wikipedia.org/wiki/Domain-specific_language
+With Epilepsy, you write code in a language of a problem domain: secondary details get obliterated, hard mental operations on a syntax level are left to machines -- just focus on the essence of your task.
 
 ## Overview
 
