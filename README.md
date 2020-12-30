@@ -10,7 +10,7 @@
 
 TODO: the main example.
 
-With Epilepsy, you write code in a language of a problem domain: secondary details get obliterated, hard mental operations on a syntax level are left to machines -- just focus on the essence of your task.
+Epilepsy enables you to write code in a language of a problem domain. Thus, secondary details get obliterated, hard mental operations on a syntax level are left to machines -- just focus on the essence of your task.
 
 ## Overview
 
