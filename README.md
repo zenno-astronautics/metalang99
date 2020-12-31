@@ -10,7 +10,7 @@
 
 TODO: the main example.
 
-Epilepsy enables you to easily develop both small and complex metaprograms for the C/C++ preprocessor. Among others, you have algebraic data types, control expressions, and currying at your disposal.
+Epilepsy enables you to easily develop both small and complex metaprograms for the C/C++ preprocessor. Its prominent features include algebraic data types, general recursion, and currying.
 
 ## Overview
 
