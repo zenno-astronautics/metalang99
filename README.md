@@ -10,7 +10,7 @@
 
 TODO: the main example.
 
-Epilepsy is a functional language aimed full-blown C99/C++11 preprocessor metaprogramming. It features algebraic data types, various operators and control expressions, collections, general recursion, and auto-currying.
+Epilepsy is a functional language aimed at full-blown C/C++ preprocessor metaprogramming. It features algebraic data types, various operators and control expressions, collections, general recursion, and auto-currying -- to squeeze everything out of the preprocessor.
 
 ## Overview
 
