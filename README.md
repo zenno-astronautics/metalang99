@@ -10,7 +10,7 @@
 
 TODO: the main example.
 
-Epilepsy enables you to create and use languages that [coincide with a problem domain](https://en.wikipedia.org/wiki/Language-oriented_programming). This way, secondary details get thrown away; your code clearly reflects the essence of a task, leading towards a more maintainable and reliable design.
+Epilepsy enables you to create and use languages that [coincide with a problem domain](https://en.wikipedia.org/wiki/Language-oriented_programming). This way, secondary details get thrown away; your code clearly reflects the essence of a task -- a more maintainable and reliable design.
 
 ## Overview
 
