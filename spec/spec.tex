@@ -6,7 +6,7 @@
 \usepackage{minted}
 \usepackage{amsmath}
 \usepackage{amssymb}
-\usepackage{ntheorem}
+\usepackage[standard,thmmarks]{ntheorem}
 \usepackage{biblatex}
 \usepackage{csquotes}
 \usepackage{mathtools}
@@ -15,8 +15,6 @@
 
 \theoremstyle{break}
 \newtheorem{notation}{Notation}
-\newtheorem{example}{Example}
-\newtheorem{axiom}{Axiom}
 
 \addbibresource{references.bib}
 
@@ -246,7 +244,14 @@ unlike the preprocessor:
 
 \subsection{Progress}
 
-TODO: prove the progress theorem.
+\begin{proposition}[Progress]
+Either $\langle K; F; A; \overline{t} \rangle \to \langle K; F; A; \overline{t'} \rangle$ or
+$\langle K; F; A; \overline{t} \rangle \to halt(\overline{x})$.
+\end{proposition}
+
+\begin{proof}
+By inspection of \ref{ReductionSemantics}.
+\end{proof}
 
 \section{Caveats}
 
