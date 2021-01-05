@@ -102,7 +102,7 @@ int main(void) {}
 
 A:
 
- - **Formal proofs.** With a mathematical model it becomes possible to proof things about Epilepsy formally; for example, the progress theorem, which can be stated as "the interpreter always knows what to do next".
+ - **Formal proofs.** With a mathematical model it becomes possible to prove things about Epilepsy formally; for example, the progress theorem, which can be stated as "the interpreter always knows what to do next".
 
  - **It guides the implementation.** The implementation gets adjusted with the specification (i.e. reflects the formal syntax and semantics), thereby making itself easier to reason about.
 
