@@ -14,7 +14,7 @@
 #include <epilepsy.h>
 
 int main(void) {
-    // List manipulation {
+    // Compile-time list manipulation {
     // "Rachmaninoff" "Bach" "Chopin"
     E_listEval(E_listReverse(E_list(v("Chopin", "Bach", "Rachmaninoff"))))
 

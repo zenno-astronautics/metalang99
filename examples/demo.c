@@ -8,7 +8,7 @@ int main(void) {
     // clang-format off
     IGNORE(
 
-    // List manipulation {
+    // Compile-time list manipulation {
     // "Rachmaninoff" "Bach" "Chopin"
     E_listEval(E_listReverse(E_list(v("Chopin", "Bach", "Rachmaninoff"))))
 
