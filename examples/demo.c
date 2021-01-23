@@ -2,14 +2,18 @@
 
 int main(void) {
     // Compile-time list manipulation {
-    // "Rachmaninoff" "Bach" "Chopin"
-    E_listEval(E_listReverse(E_list(v("Chopin", "Bach", "Rachmaninoff"))));
+    // puts("c");
+    // puts("b");
+    // puts("a");
+    E_listEval(E_listReverse(E_list(v(puts("a");, puts("b");, puts("c");))));
 
-    // 9 2 5
-    E_listEval(E_listFilter(E_list(v(9, 2, 11, 13, 5)), E_appl(v(E_uintGreater), v(10))));
+    // 9; 2; 5;
+    E_listEval(E_listIntersperse(
+        E_listFilter(E_list(v(9, 2, 11, 13, 5)), E_appl(v(E_uintGreater), v(10))), v(;)));
 
-    // 4 5 6
-    E_listEval(E_listMap(E_appl(v(E_uintAdd), v(3)), E_list(v(1, 2, 3))));
+    // 4; 5; 6; 7; 8; 9;
+    E_listEval(E_listIntersperse(
+        E_listMap(E_appl(v(E_uintAdd), v(3)), E_list(v(1, 2, 3, 4, 5, 6))), v(;)));
     // }
 
     // General macro recursion {
