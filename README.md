@@ -220,3 +220,7 @@ A:
  - **Distinctness.** With a formal specification, it is much easier to answer questions like "Is it a bug of the implementation or it is a valid behaviour according to the specification?".
 
 That is, the development flow is "specification-driven", if you prefer.
+
+### Q: Is Epilepsy Turing-complete?
+
+A: Nope. The C/C++ preprocessor is capable to iterate only up to a certain limit (see this [SO question](https://stackoverflow.com/questions/3136686/is-the-c99-preprocessor-turing-complete)). For Epilepsy, this limit is defined in terms of reductions steps (see the [specification]).
