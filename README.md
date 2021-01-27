@@ -67,7 +67,7 @@ It features a wide range of concepts, including algebraic data types, control fl
 
 The C macro system is a tool to extend the host language with custom syntactic sugar, to make code closer to a problem domain. However, the arsenal it provides is infinitely poor: all we can do is basic copy-pasting of tokens. We cannot even operate with an unbounded sequence of tokens, thereby throwing a lot of hypothetically useful metaprograms out of scope.
 
-This is what Epilepsy tries to fix -- it enriches the standard-confirming (C99/C++11 and onwards) preprocessor with the great variosity of metaprogramming abilities, to make development of both small and complex metaprograms painless (see [datatype99] -- [algebraic data types] for pure C).
+This is what Epilepsy tries to fix -- it enriches the standard-confirming (C99/C++11 and onwards) preprocessor with the great variosity of metaprogramming abilities, to make development of both small and complex metaprograms painless (see [datatype99] -- type-safe [algebraic data types] for pure C).
 
 Now, to make the discussion concrete, we are about to implement a switch statement for strings! The problem can be stated as follows: given a null-terminated string `str`, match it against a set of patterns. If `str` matches a pattern `pat`, then execute the corresponding body and jump to the next instruction; if all the patterns have failed, execute the default case. We can solve it via if-then-else statements:
 
