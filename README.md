@@ -101,20 +101,16 @@ Clearly, this approach induces a lot of boilerplate which we shall avoid. A bett
 Having the above macros defined, pattern matching for strings is easy:
 
 ```c
-#include <stdio.h>
-#include <string.h>
+const char *reason = "OK";
+int status_code;
 
-int main(void) {
-    const char *reason = "OK";
-    int status_code;
-
-    // status_code = 200;
-    MATCH(
-        reason,
-        ("OK", { status_code = 200; }),
-        ("Moved Permanently", { status_code = 301; }),
-        ("Not Found", { status_code = 404; }),
-        ({ status_code = -1; }));
+// status_code = 200;
+MATCH(
+    reason,
+    ("OK", { status_code = 200; }),
+    ("Moved Permanently", { status_code = 301; }),
+    ("Not Found", { status_code = 404; }),
+    ({ status_code = -1; }));
 }
 ```
 
