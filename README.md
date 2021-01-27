@@ -147,7 +147,7 @@ As you can see, code written in Epilepsy consists of combined functions -- this 
 
 ### Q: Why not just use third-party code generators?
 
-A: There is a distinction between external and embedded [domain-specific languages (DSLs)]: external languages are implemented using third-party tools; on the other hand, embedded languages are implemented atop a host general-purpose programming language, such as C, and usually have much more seamless integration with other code base. Moreover, third-party code generators induce additional burden with their distribution and setup.
+A: There is a distinction between external and embedded [domain-specific languages (DSLs)]: external languages are implemented using third-party tools; on the other hand, embedded languages are implemented atop a host general-purpose programming language, such as C, and usually have much more seamless integration with a code base. Moreover, third-party code generators induce additional burden with their distribution and setup.
 
 [domain-specific languages (DSLs)]: https://en.wikipedia.org/wiki/Domain-specific_language
 
