@@ -133,7 +133,7 @@ It works as follows:
        1. `E_unparenthesise` transforms `(pat, body)` into `pat, body`.
        2. `E_appl(v(GEN_BRANCH), v(str))` is `GEN_BRANCH` [partially applied] to the matched string `"OK"`.
     2. The second function, `GEN_DEFAULT_BRANCH`, just unparenthesises the default case body.
- 3. E_listEval` evaluates the list and pastes all its elements right into the source file.
+ 3. `E_listEval` evaluates the list and pastes all its elements right into the source file.
  4. `GEN_BRANCH_ARITY` is a number of parameters that `GEN_BRANCH` accepts: `str` and an unparenthesised branch (see [`EPILEPSY_appl`](https://epilepsy.readthedocs.io/en/latest/lang.html#c.EPILEPSY_appl)).
 
 As you can see, code written in Epilepsy consists of combined functions -- this is why Epilepsy is called functional.
