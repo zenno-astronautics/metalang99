@@ -67,7 +67,7 @@ It features a wide range of concepts, including algebraic data types, control fl
 
 The C macro system is a tool to extend the host language with custom syntactic sugar, to make code closer to a problem domain. However, the arsenal it provides is infinitely poor: all we can do is basic copy-pasting of tokens. We cannot even operate with an unbounded sequence of tokens, thereby throwing a lot of hypothetically useful metaprograms out of scope.
 
-This is what Epilepsy tries to fix -- it enriches the standard-confirming (C99/C++11 and onwards) preprocessor with the great variosity of metaprogramming abilities, to be able to painlessly develop even complex metaprograms, such as [datatype99].
+This is what Epilepsy tries to fix -- it enriches the standard-confirming (C99/C++11 and onwards) preprocessor with the great variosity of metaprogramming abilities, to make development of both small and complex metaprograms painless (see [datatype99] -- [algebraic data types] for pure C).
 
 Now, to make the discussion concrete, I shall demonstrate Epilepsy on the example of one small metaprogram: a switch statement for strings. The problem can be stated as follows: given a null-terminated string `str`, match it against a set of patterns. If `str` matches a pattern `pat`, then execute the corresponding body and jump to the next instruction; if all the patterns have failed, execute the default case. We can solve it via if-then-else statements:
 
@@ -144,6 +144,7 @@ It works as follows:
 As you can see, code written in Epilepsy consists of combined functions -- this is why Epilepsy is called functional.
 
 [datatype99]: https://github.com/Hirrolot/datatype99
+[algebraic data types]: https://en.wikipedia.org/wiki/Algebraic_data_type
 [composition]: https://en.wikipedia.org/wiki/Function_composition
 [partially applied]: https://en.wikipedia.org/wiki/Partial_application
 
