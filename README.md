@@ -159,6 +159,12 @@ A: In short, it provides more functionality, it is well-tested, and actively mai
 
 [Boost/Preprocessor]: http://boost.org/libs/preprocessor
 
+### Q: Compilation times?
+
+A: No benchmarks yet but you can take a look at the [CI] or measure compilation time of each test/example separately.
+
+[CI]: https://github.com/Hirrolot/epilepsy/actions
+
 ### Q: Why formal specification?
 
 A:
