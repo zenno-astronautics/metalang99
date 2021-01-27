@@ -68,6 +68,7 @@ It features a wide range of concepts, including algebraic data types, control fl
  - [Installation](#installation)
  - [Motivation](#motivation)
  - [What's next?](#whats-next)
+ - [Source code structure](#source-code-structure)
  - [FAQ](#faq)
 
 ## Installation
@@ -160,6 +161,21 @@ To learn how to use Epilepsy, take a look at [our GitBook] and the [examples](ex
 
 [our GitBook]: https://hirrolot.gitbook.io/epilepsy/
 [issues]: https://github.com/Hirrolot/epilepsy/issues
+
+## Source code structure
+
+Epilepsy is split into two parts: the interpreter and the standard library.
+
+The interpreter interprets the core metalanguage described in the [specification]. It is located in [`eval.h`] and [`eval/`]. The former file contains the machine written in [continuation-passing style] which is described in the specification too. [`eval/rec/`] contains the macro recursion engine upon which everything executes.
+
+All the other files except [`priv/`] (the private auxiliary functions) comprise the standard library. 
+
+[continuation-passing style]: https://en.wikipedia.org/wiki/Continuation-passing_style
+[specification]: https://github.com/Hirrolot/epilepsy/blob/master/spec/spec.pdf
+[`eval.h`]: include/epilepsy/eval.h
+[`eval/`]: include/epilepsy/eval/
+[`eval/rec/`]: include/epilepsy/eval/rec/
+[`priv/`]: include/epilepsy/priv/
 
 ## FAQ
 
