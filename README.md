@@ -65,7 +65,7 @@ It features a wide range of concepts, including algebraic data types, control fl
 
 ## Motivation
 
-The C macro system is a tool to extend C with new syntactic constructs, to make code closer to a problem domain. However, the arsenal it provides is infinitely poor: all we can do is basic copy-pasting of tokens. We cannot even express recursive macros, which means that operating with an unbounded sequence of tokens is impossible.
+The C macro system is a tool to extend C with new syntactic constructs, to make code closer to a problem domain. However, the arsenal it provides is infinitely poor: all we can do is basic copy-pasting of tokens. We cannot even operate with an unbounded sequence of tokens, which puts many hypothetically useful out of scope.
 
 This is what Epilepsy tries to fix -- it enriches the standard-confirming C99 preprocessor with the great variosity of metaprogramming abilities, to be able to painlessly develop even complex metaprograms, such as [datatype99].
 
