@@ -72,6 +72,8 @@ It features a wide range of concepts, including algebraic data types, control fl
 
 ## Installation
 
+You have two options: download either this repository or the [amalgamated header](https://github.com/Hirrolot/epilepsy-amalgamation). In the first case, you must add one more include path `epilepsy/include`. No additional setup is needed.
+
 ## Motivation
 
 The C macro system is a tool to extend the host language with custom syntactic sugar, to make code closer to a problem domain. However, the arsenal it provides is infinitely poor: all we can do is basic copy-pasting of tokens. We cannot even operate with an unbounded sequence of tokens, thereby throwing a lot of hypothetically useful metaprograms out of scope.
