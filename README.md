@@ -129,7 +129,7 @@ It works as follows:
  3. The first function is a [composition] of `E_appl(v(E_variadicsMatch), E_appl(v(GEN_BRANCH), v(str)))` and `E_unparenthesise`:
     1. `E_unparenthesise` unparenthesises a branch; for example, `("OK", { status_code = 200; })` becomes `"OK", { status_code = 200; }`.
     2. `E_appl(v(E_variadicsMatch), E_appl(v(GEN_BRANCH), v(str)))` constructs a function that accepts an unparenthesised branch representation consisting of a pattern and a body, and redirects both to `GEN_BRANCH` [partially applied] to the matched string `"OK"`.
- 4. The second function is `GEN_DEFAULT_BRANCH`, which just unparenthesises the default case.
+ 4. The second function is `GEN_DEFAULT_BRANCH`, which just unparenthesises the default case body.
  5. `E_listEval` evaluates the list and unwraps all its elements right into the source file.
 
 As you can see, code written in Epilepsy consists of combined functions -- this is why Epilepsy is called functional.
