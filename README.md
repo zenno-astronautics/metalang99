@@ -143,6 +143,13 @@ As you can see, code written in Epilepsy consists of combined functions -- this 
 [composition]: https://en.wikipedia.org/wiki/Function_composition
 [partially applied]: https://en.wikipedia.org/wiki/Partial_application
 
+## What's next?
+
+To learn how to use Epilepsy, take a look at our [GitBook] and the [examples](examples/). That's all! -- feel free to ask questions, report bugs, and suggest enhancements in [issues].
+
+[GitBook]: https://hirrolot.gitbook.io/epilepsy/
+[issues]: https://github.com/Hirrolot/epilepsy/issues
+
 ## FAQ
 
 ### Q: Why not just use third-party code generators?
