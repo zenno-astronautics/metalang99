@@ -122,6 +122,18 @@ int main(void) {
 }
 ```
 
+<details>
+    <summary>Compare with if-then-else</summary>
+
+```c
+if (strcmp(reason, "OK") == 0) { status_code = 200; }
+else if (strcmp(reason, "Moved Permanently") == 0) { status_code = 301; }
+else if (strcmp(reason, "Not Found") == 0) { status_code = 404; }
+else { status_code = -1; }
+```
+
+</details>
+
 It works as follows:
 
  1. `E_list(v(__VA_ARGS__))` constructs an internal representation of a list of branches to operate on.
