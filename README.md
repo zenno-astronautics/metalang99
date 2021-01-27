@@ -174,7 +174,7 @@ See [`CONTRIBUTING.md`](CONTRIBUTING.md).
 
 Epilepsy is split into two parts: the interpreter and the standard library.
 
-The interpreter interprets the core metalanguage described in the [specification]. It is located in [`eval.h`] and [`eval/`]. The former file contains the machine written in [continuation-passing style] which is described in the specification too. [`eval/rec/`] contains the macro recursion engine upon which everything executes.
+The interpreter interprets the core metalanguage described in the [specification]. It is located in [`eval.h`] and [`eval/`]. The former file contains a machine written in [continuation-passing style] which is described in the specification too. [`eval/rec/`] contains a macro recursion engine upon which everything executes.
 
 All the other files except [`priv/`] (private auxiliary stuff) comprise the standard library. 
 
