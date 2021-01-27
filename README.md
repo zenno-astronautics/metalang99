@@ -151,6 +151,12 @@ A: There is a distinction between external and embedded [domain-specific languag
 
 [domain-specific languages (DSLs)]: https://en.wikipedia.org/wiki/Domain-specific_language
 
+### Q: In what aspects Epilepsy differs from other preprocessor libraries?
+
+A: In short, it provides more functionality, it is well-tested, and actively maintained. In particular, [Boost/Preprocessor] is well-tested and actively maintained too, but lacks general metarecursion, partial application, choice types, graceful error reporting, and debugging facilities.
+
+[Boost/Preprocessor]: http://boost.org/libs/preprocessor
+
 ### Q: Why formal specification?
 
 A:
