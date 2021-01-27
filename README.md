@@ -149,7 +149,7 @@ It works as follows:
  3. `E_listEval` evaluates the list and pastes all its elements right into the source file.
  4. `GEN_BRANCH_ARITY` is a number of parameters that `GEN_BRANCH` accepts: `str` and an unparenthesised branch (see [`EPILEPSY_appl`](https://epilepsy.readthedocs.io/en/latest/lang.html#c.EPILEPSY_appl)).
 
-As you can see, code written in Epilepsy consists of combined functions -- this is why Epilepsy is called functional.
+As you can see, code written in Epilepsy consists of combined functions -- this is why Epilepsy is called _functional_.
 
 [datatype99]: https://github.com/Hirrolot/datatype99
 [algebraic data types]: https://en.wikipedia.org/wiki/Algebraic_data_type
