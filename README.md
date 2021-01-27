@@ -63,6 +63,15 @@ Epilepsy is a functional language aimed at full-blown C/C++ preprocessor metapro
 
 It features a wide range of concepts, including algebraic data types, control flow operators, collections, general recursion, and auto-currying -- to make metaprograms of all sizes maintainable.
 
+## Table of contents
+
+ - [Installation](#installation)
+ - [Motivation](#motivation)
+ - [What's next?](#whats-next)
+ - [FAQ](#faq)
+
+## Installation
+
 ## Motivation
 
 The C macro system is a tool to extend the host language with custom syntactic sugar, to make code closer to a problem domain. However, the arsenal it provides is infinitely poor: all we can do is basic copy-pasting of tokens. We cannot even operate with an unbounded sequence of tokens, thereby throwing a lot of hypothetically useful metaprograms out of scope.
