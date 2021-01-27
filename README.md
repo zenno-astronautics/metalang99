@@ -145,9 +145,9 @@ As you can see, code written in Epilepsy consists of combined functions -- this 
 
 ## What's next?
 
-To learn how to use Epilepsy, take a look at our [GitBook] and the [examples](examples/). That's all! -- feel free to ask questions, report bugs, and suggest enhancements in the [issues].
+To learn how to use Epilepsy, take a look at [our GitBook] and the [examples](examples/). That's all! -- feel free to ask questions, report bugs, and suggest enhancements in the [issues].
 
-[GitBook]: https://hirrolot.gitbook.io/epilepsy/
+[our GitBook]: https://hirrolot.gitbook.io/epilepsy/
 [issues]: https://github.com/Hirrolot/epilepsy/issues
 
 ## FAQ
