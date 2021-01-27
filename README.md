@@ -149,7 +149,7 @@ As you can see, code written in Epilepsy consists of combined functions -- this 
 
 A:
 
- - Preprocessor macros are far more seamlessly integrated with a code base.
+ - Preprocessor macros are far more seamlessly integrated with a code base: you can invoke them in the same source files where ordinary code in C is written.
  - IDE support.
  - Avoid additional burden with distribution and setup of third-party code generators.
 
