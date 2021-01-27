@@ -68,6 +68,7 @@ It features a wide range of concepts, including algebraic data types, control fl
  - [Installation](#installation)
  - [Motivation](#motivation)
  - [What's next?](#whats-next)
+ - [Contributing](#contributing)
  - [Source code structure](#source-code-structure)
  - [FAQ](#faq)
 
@@ -164,6 +165,10 @@ That's all! -- feel free to ask questions, report bugs, and suggest enhancements
 
 [our GitBook]: https://hirrolot.gitbook.io/epilepsy/
 [issues]: https://github.com/Hirrolot/epilepsy/issues
+
+## Contributing
+
+See [`CONTRIBUTING.md`](CONTRIBUTING.md).
 
 ## Source code structure
 
