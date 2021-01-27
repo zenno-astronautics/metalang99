@@ -128,13 +128,13 @@ else { status_code = -1; }
 It works as follows:
 
  1. `E_list(v(__VA_ARGS__))` is a list of the branches to operate on.
- 2. `E_listMapInitLast` accepts the two functions and the list of the branches. The first function (see below) maps all the elements except the last, and the second function maps the last element (the default case).
- 3. The first function is a [composition] of `E_appl(v(GEN_BRANCH), v(str))` and `E_unparenthesise`:
-    1. `E_unparenthesise` transforms `(pat, body)` into `pat, body`.
-    2. `E_appl(v(GEN_BRANCH), v(str))` is `GEN_BRANCH` [partially applied] to the matched string `"OK"`.
- 4. The second function, `GEN_DEFAULT_BRANCH`, just unparenthesises the default case body.
- 5. `E_listEval` evaluates the list and pastes all its elements right into the source file.
- 6. `GEN_BRANCH_ARITY` is a number of parameters that `GEN_BRANCH` accepts: `str` and an unparenthesised branch (see [`EPILEPSY_appl`](https://epilepsy.readthedocs.io/en/latest/lang.html#c.EPILEPSY_appl)).
+ 2. `E_listMapInitLast` accepts the two functions and the list of the branches. The first function (see below) maps all the elements except the last, and the second function maps the last element (the default case):
+    1. The first function is a [composition] of `E_appl(v(GEN_BRANCH), v(str))` and `E_unparenthesise`:
+       1. `E_unparenthesise` transforms `(pat, body)` into `pat, body`.
+       2. `E_appl(v(GEN_BRANCH), v(str))` is `GEN_BRANCH` [partially applied] to the matched string `"OK"`.
+    2. The second function, `GEN_DEFAULT_BRANCH`, just unparenthesises the default case body.
+ 3. E_listEval` evaluates the list and pastes all its elements right into the source file.
+ 4. `GEN_BRANCH_ARITY` is a number of parameters that `GEN_BRANCH` accepts: `str` and an unparenthesised branch (see [`EPILEPSY_appl`](https://epilepsy.readthedocs.io/en/latest/lang.html#c.EPILEPSY_appl)).
 
 As you can see, code written in Epilepsy consists of combined functions -- this is why Epilepsy is called functional.
 
