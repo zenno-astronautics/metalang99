@@ -111,7 +111,6 @@ MATCH(
     ("Moved Permanently", { status_code = 301; }),
     ("Not Found", { status_code = 404; }),
     ({ status_code = -1; }));
-}
 ```
 
 <details>
