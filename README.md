@@ -74,7 +74,17 @@ It features a wide range of concepts, including algebraic data types, control fl
 
 ## Installation
 
-You have two options: download either this repository or the [amalgamated header](https://github.com/Hirrolot/epilepsy-amalgamation). In the first case, you must add one more include path `epilepsy/include`. No additional setup is needed: Epilepsy is implemented using only preprocessor macros.
+You have two options: download either this repository or the [amalgamated header](https://github.com/Hirrolot/epilepsy-amalgamation):
+
+```sh
+# Download this repository:
+$ git clone https://github.com/Hirrolot/epilepsy.git
+
+# Download the amalgamated header:
+$ git clone https://github.com/Hirrolot/epilepsy-amalgamation.git
+```
+
+In the first case, you must add one more include path `epilepsy/include`. No additional setup is needed: Epilepsy is implemented using only preprocessor macros.
 
 ## Motivation
 
