@@ -49,7 +49,7 @@ is \textbf{not} designed as a user-friendly overview -- see the official reposit
 <eval> ::= "EPILEPSY_eval(" { <term> }* ")" ;
 
 <term> ::= "EPILEPSY_call(" <op> "," { <term> }* ")"
-         | "EPILEPSY_dbg(" <preprocessor-token-list> ")"
+         | "EPILEPSY_abort(" { <term> }* ")"
          | "EPILEPSY_fatal(" <ident> ","
                 <preprocessor-token-list> ")"
          | "v(" <preprocessor-token-list> ")" ;
