@@ -81,7 +81,7 @@ You have two options: download either this repository or the [amalgamated header
 $ git clone https://github.com/Hirrolot/epilepsy.git
 
 # Download the amalgamated header:
-$ git clone https://github.com/Hirrolot/epilepsy-amalgamation.git
+$ wget https://raw.githubusercontent.com/Hirrolot/epilepsy-amalgamation/master/epilepsy.h
 ```
 
 In the first case, you must add one more include path `epilepsy/include`. No additional setup is needed: Epilepsy is implemented using only preprocessor macros.
