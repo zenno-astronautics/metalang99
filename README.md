@@ -67,7 +67,7 @@ It features a wide range of concepts, including algebraic data types, control fl
 
  - [Installation](#installation)
  - [Motivation](#motivation)
- - [What's next?](#whats-next)
+ - [Quick start](#quick-start)
  - [Contributing](#contributing)
  - [Source code structure](#source-code-structure)
  - [FAQ](#faq)
@@ -156,15 +156,11 @@ As you can see, code written in Epilepsy consists of combined functions -- this 
 [composition]: https://en.wikipedia.org/wiki/Function_composition
 [partially applied]: https://en.wikipedia.org/wiki/Partial_application
 
-## What's next?
+## Quick start
 
- - To learn how to use Epilepsy, take a look at [our GitBook] and the [examples](examples/).
- - The standard library documentation is located [here](https://epilepsy.readthedocs.io/en/latest/).
-
-That's all! -- feel free to ask questions, report bugs, and suggest enhancements in the [issues].
+See [our GitBook].
 
 [our GitBook]: https://hirrolot.gitbook.io/epilepsy/
-[issues]: https://github.com/Hirrolot/epilepsy/issues
 
 ## Contributing
 
