@@ -203,8 +203,8 @@ Notes:
 Take the following code:
 
 \begin{minted}{c}
-#define X(op)        call(op, v(123))
-#define CALL_X(_123) call(X, v(ID))
+#define X(op)        EPILEPSY_call(op, v(123))
+#define CALL_X(_123) EPILEPSY_call(X, v(ID))
 #define ID(x)        v(x)
 \end{minted}
 
