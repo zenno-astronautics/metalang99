@@ -67,7 +67,7 @@ It features a wide range of concepts, including algebraic data types, control fl
 
  - [Installation](#installation)
  - [Motivation](#motivation)
- - [Quick start](#quick-start)
+ - [Tutorial](#tutorial)
  - [Contributing](#contributing)
  - [Source code structure](#source-code-structure)
  - [FAQ](#faq)
@@ -166,9 +166,9 @@ As you can see, code written in Epilepsy consists of combined functions -- this 
 [composition]: https://en.wikipedia.org/wiki/Function_composition
 [partially applied]: https://en.wikipedia.org/wiki/Partial_application
 
-## Quick start
+## Tutorial
 
-See [our GitBook].
+See [our GitBook] as a user-friendly guide.
 
 [our GitBook]: https://hirrolot.gitbook.io/epilepsy/
 
