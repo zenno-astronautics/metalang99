@@ -59,6 +59,8 @@ int main(void) {
 }
 ```
 
+(Hint: `v(something)` evaluates to `something`.)
+
 Epilepsy is a functional language aimed at full-blown C/C++ preprocessor metaprogramming.
 
 It features a wide range of concepts, including algebraic data types, control flow operators, collections, general recursion, and auto-currying -- to make metaprograms of all sizes maintainable.
