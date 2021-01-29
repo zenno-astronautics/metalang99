@@ -94,7 +94,7 @@ To use Epilepsy, just `#include <epilepsy.h>` beforehand. No additional setup is
 
 The C macro system can be viewed as a tool to extend the language with custom syntactic sugar, to make code closer to a problem domain. However, the arsenal it provides is infinitely poor: all we can do is basic copy-pasting of tokens. We cannot even operate with control flow, integers, and unbounded sequences, thereby throwing a lot of hypothetically useful metaprograms out of scope.
 
-To solve the problem, I have implemented a programming language atop the preprocessor, Epilepsy. Its goal is to make development of both small and complex metaprograms painless. [datatype99] clearly demonstrates the power of Epilepsy:
+To solve the problem, I have implemented Epilepsy -- a self-contained programming language atop the preprocessor. Its goal is to make development of both small and complex metaprograms painless. [datatype99] clearly demonstrates the power of Epilepsy:
 
 [datatype99]: https://github.com/Hirrolot/datatype99
 [algebraic data types]: https://en.wikipedia.org/wiki/Algebraic_data_type
