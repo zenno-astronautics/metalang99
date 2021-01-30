@@ -100,7 +100,7 @@ To solve the problem, I have implemented Epilepsy -- a functional programming la
 
 ```
 
-Here, `Tree` is a [sum type] -- a technique to conveniently encode and deal with alternative data representations. Thanks to Epilepsy, the implementation of datatype99 is straightforward, and the interface is type-safe.
+Here, `Tree` is a [sum type] -- a technique to conveniently encode and deal with alternative data representations. Despite the fact that datatype99 is not a trivial metaprogram, its implementation is straightforward and the interface is type-safe -- thanks to Epilepsy.
 
 [datatype99]: https://github.com/Hirrolot/datatype99
 [algebraic data types]: https://en.wikipedia.org/wiki/Algebraic_data_type
