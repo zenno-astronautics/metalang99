@@ -107,7 +107,7 @@ In the first case, you must add one more include path `epilepsy/include`.
 
 To use execute Epilepsy in your code, just `#include <epilepsy.h>` beforehand (or, alternatively, include separate header files described in the documentation).
 
-[Our small GitBook] will gain the necessary intuition to use Epilepsy. The user documentation is here: https://epilepsy.readthedocs.io/en/latest/.
+[Our small GitBook] and the [examples](examples/) will gain the necessary intuition to use Epilepsy. The user documentation is here: https://epilepsy.readthedocs.io/en/latest/.
 
 Happy hacking!
 
