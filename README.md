@@ -100,7 +100,7 @@ To solve the problem, I have implemented Epilepsy -- a functional programming la
 
 ```
 
-Here, `Tree` is a [sum type] -- an extension to the C type system that allows to conveniently encode and deal with alternative data representations. Despite the fact that datatype99 is not a trivial metaprogram, its implementation is straightforward and the interface is type-safe.
+That's how dealing with alternative data representations look like. Despite the fact that datatype99 is not a trivial metaprogram, its implementation is straightforward and the interface is type-safe.
 
 So, in summary, Epilepsy allows to do metaprogramming in C. It allows to drastically improve quality of your code -- make it safer, cleaner, and more maintainable.
 
