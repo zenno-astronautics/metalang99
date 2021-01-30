@@ -1,6 +1,11 @@
 # Contributing
 
-To introduce changes, fork this repository, work in your own branch, and then open a PR to `master`.
+To introduce changes:
+
+ 1. fork this repository,
+ 2. create your own branch from `master`,
+ 3. make required changes,
+ 4. open a PR to `master` from this branch.
 
 Some useful scripts are:
 
