@@ -102,7 +102,7 @@ To solve the problem, I have implemented Epilepsy -- a functional programming la
 
 That's how dealing with alternative data representations look like. Despite the fact that datatype99 is not a trivial metaprogram, its implementation is straightforward and the interface is type-safe.
 
-So, in summary, Epilepsy allows to do metaprogramming in C. It allows to drastically improve quality of your code -- make it safer, cleaner, and more maintainable.
+So, in summary, Epilepsy allows to do advanced metaprogramming in C. It allows to drastically improve quality of your code -- make it safer, cleaner, and more maintainable.
 
 [datatype99]: https://github.com/Hirrolot/datatype99
 [algebraic data types]: https://en.wikipedia.org/wiki/Algebraic_data_type
