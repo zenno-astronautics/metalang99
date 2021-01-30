@@ -67,28 +67,11 @@ It features a wide range of concepts, including algebraic data types, control fl
 
 ## Table of contents
 
- - [Installation](#installation)
  - [Motivation](#motivation)
- - [Tutorial](#tutorial)
+ - [Getting started](#getting-started)
  - [Contributing](#contributing)
  - [Source code structure](#source-code-structure)
  - [FAQ](#faq)
-
-## Installation
-
-You have two options: download either this repository or the [amalgamated header](https://github.com/Hirrolot/epilepsy-amalgamation):
-
-```sh
-# Download this repository:
-$ git clone https://github.com/Hirrolot/epilepsy.git
-
-# Download the amalgamated header:
-$ wget https://raw.githubusercontent.com/Hirrolot/epilepsy-amalgamation/master/epilepsy.h
-```
-
-In the first case, you must add one more include path `epilepsy/include`.
-
-To use Epilepsy, just `#include <epilepsy.h>` beforehand. No additional setup is needed: Epilepsy is implemented using only preprocessor macros.
 
 ## Motivation
 
@@ -108,11 +91,27 @@ So, in summary, Epilepsy allows to do advanced metaprogramming in C. It allows t
 [algebraic data types]: https://en.wikipedia.org/wiki/Algebraic_data_type
 [sum type]: https://en.wikipedia.org/wiki/Tagged_union
 
-## Tutorial
+## Getting started
 
-See [our GitBook] as a user-friendly guide.
+To setup Epilepsy, download either this repository or the [amalgamated header](https://github.com/Hirrolot/epilepsy-amalgamation):
 
-[our GitBook]: https://hirrolot.gitbook.io/epilepsy/
+```sh
+# Download this repository:
+$ git clone https://github.com/Hirrolot/epilepsy.git
+
+# OR download the amalgamated header:
+$ wget https://raw.githubusercontent.com/Hirrolot/epilepsy-amalgamation/master/epilepsy.h
+```
+
+In the first case, you must add one more include path `epilepsy/include`.
+
+To use execute Epilepsy in your code, just `#include <epilepsy.h>` beforehand (or, alternatively, include separate header files described in the documentation).
+
+[Our small GitBook] will gain the necessary intuition to use Epilepsy. The user documentation is here: https://epilepsy.readthedocs.io/en/latest/.
+
+Happy hacking!
+
+[Our small GitBook]: https://hirrolot.gitbook.io/epilepsy/
 
 ## Contributing
 
