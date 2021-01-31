@@ -80,7 +80,24 @@ The C macro system can be viewed as a tool to extend the language with custom sy
 To solve the problem, I have implemented Epilepsy -- a functional programming language executing on any standard-confirming preprocessor (C99/C++11 and onwards). Its goal is to make development of both small and complex metaprograms painless. [datatype99] clearly demonstrates the power of Epilepsy:
 
 ```c
+#include <datatype99.h>
 
+datatype(
+    BinaryTree,
+    (Leaf, int),
+    (Node, struct BinaryTree *, int, struct BinaryTree *)
+);
+
+int sum(const BinaryTree *tree) {
+    match(*tree) {
+        of(Leaf, x) {
+            return *x;
+        }
+        of(Node, lhs, x, rhs) {
+            return sum(*lhs) + *x + sum(*rhs);
+        }
+    }
+}
 ```
 
 That's how dealing with alternative data representations look like. Despite the fact that datatype99 is not a trivial metaprogram, its implementation is straightforward and the interface is type-safe.
