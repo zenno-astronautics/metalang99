@@ -102,7 +102,7 @@ int sum(const BinaryTree *tree) {
 }
 ```
 
-That's how dealing with alternative data representations look like. Despite the fact that datatype99 is not a trivial metaprogram, its implementation is straightforward and the interface is type-safe.
+That's how dealing with alternative data representations look like. Despite the fact that datatype99 is not a trivial metaprogram, its implementation in Epilepsy is straightforward and the interface is type-safe.
 
 So, in summary, Epilepsy allows to do advanced metaprogramming in C. It allows to drastically improve quality of your code -- make it safer, cleaner, and more maintainable.
 
