@@ -77,7 +77,9 @@ It features a wide range of concepts, including algebraic data types, control fl
 
 The C macro system can be viewed as a tool to extend the language with custom syntactic sugar, to make code closer to a problem domain. However, the arsenal it provides is infinitely poor: all we can do is basic copy-pasting of tokens. We cannot even operate with control flow, integers, and unbounded sequences, thereby throwing a lot of hypothetically useful metaprograms out of scope.
 
-To solve the problem, I have implemented Epilepsy -- a functional programming language executing on any standard-confirming preprocessor (C99/C++11 and onwards). Its goal is to make development of both small and complex metaprograms painless. [datatype99] clearly demonstrates what can be done with Epilepsy:
+To solve the problem, I have implemented Epilepsy -- a functional programming language executing on any standard-confirming preprocessor. Most importantly, it is designed in such a way to permit general macro recursion so typically you will not find yourself in a sutiation where expansion gets [blocked by some mysterious reason](https://github.com/pfultz2/Cloak/wiki/C-Preprocessor-tricks,-tips,-and-idioms#recursion). It also exports some nice features like partial application, error reporting and all the stuff.
+
+As a practical example of what is possible with Epilepsy, consider [datatype99]. It implements type-safe [sum types] in pure C99, by heavy use of metaprogramming:
 
 ```c
 // Sums all nodes of a binary tree.
@@ -105,8 +107,7 @@ int sum(const BinaryTree *tree) {
 So, in summary, Epilepsy allows to do advanced metaprogramming in C. It allows to drastically improve quality of your code -- make it safer, cleaner, and more maintainable.
 
 [datatype99]: https://github.com/Hirrolot/datatype99
-[algebraic data types]: https://en.wikipedia.org/wiki/Algebraic_data_type
-[sum type]: https://en.wikipedia.org/wiki/Tagged_union
+[sum types]: https://en.wikipedia.org/wiki/Tagged_union
 
 ## Getting started
 
