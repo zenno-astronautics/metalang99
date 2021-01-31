@@ -150,7 +150,7 @@ A: In short, it provides more functionality, it is well-tested, and actively mai
 
 ### Q: Compilation times?
 
-A: No benchmarks yet but you can take a look at the [CI] or measure compilation time of each test/example separately.
+A: No benchmarks yet but you can take a look at the [CI] or measure compilation time of each test/example separately. Currently, compilation times of unsigned integers suffer ([issue 7](https://github.com/Hirrolot/epilepsy/issues/7)).
 
 [CI]: https://github.com/Hirrolot/epilepsy/actions
 
