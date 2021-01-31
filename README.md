@@ -84,6 +84,8 @@ To solve the problem, I have implemented Epilepsy -- a functional programming la
 
 #include <datatype99.h>
 
+#include <stdio.h>
+
 datatype(
     BinaryTree,
     (Leaf, int),
@@ -100,9 +102,21 @@ int sum(const BinaryTree *tree) {
         }
     }
 }
-```
 
-That's how dealing with alternative data representations look like. Despite the fact that datatype99 is not a trivial metaprogram, its implementation is straightforward and the interface is type-safe.
+#define TREE(tree)                ((BinaryTree *)(BinaryTree[]){tree})
+#define NODE(left, number, right) TREE(Node(left, number, right))
+#define LEAF(number)              TREE(Leaf(number))
+
+int main(void) {
+    const BinaryTree *tree = NODE(NODE(LEAF(1), 2, NODE(LEAF(3), 4, LEAF(5))), 6, LEAF(7));
+
+    /*
+     * Output:
+     * 28
+     */
+    printf("%d\n", sum(tree));
+}
+```
 
 So, in summary, Epilepsy allows to do advanced metaprogramming in C. It allows to drastically improve quality of your code -- make it safer, cleaner, and more maintainable.
 
