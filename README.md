@@ -80,6 +80,8 @@ The C macro system can be viewed as a tool to extend the language with custom sy
 To solve the problem, I have implemented Epilepsy -- a functional programming language executing on any standard-confirming preprocessor (C99/C++11 and onwards). Its goal is to make development of both small and complex metaprograms painless. [datatype99] clearly demonstrates the power of Epilepsy:
 
 ```c
+// Sums all nodes of a binary tree.
+
 #include <datatype99.h>
 
 datatype(
