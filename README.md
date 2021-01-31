@@ -194,3 +194,7 @@ A: Nope. The C/C++ preprocessor is capable to iterate only up to a certain limit
 ### Q: Why do we need powerful preprocessor macros in the presence of templates?
 
 A: Epilepsy is primarily targeted at pure C, and C lacks templates. But anyway, you can find the argumentation for C++ at the website of [Boost/Preprocessor].
+
+### Q: What standards are supported?
+
+A: C99/C++11 and onwards.
