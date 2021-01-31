@@ -204,3 +204,7 @@ That is, the development flow is "specification-driven", if you prefer.
 ### Q: Is Epilepsy Turing-complete?
 
 A: Nope. The C/C++ preprocessor is capable to iterate only up to a certain limit (see this [SO question](https://stackoverflow.com/questions/3136686/is-the-c99-preprocessor-turing-complete)). For Epilepsy, this limit is defined in terms of reductions steps (see the [specification]).
+
+### Q: Why do we need powerful preprocessor macros in the presence of templates?
+
+A: Epilepsy is primarily targeted at pure C, and C lacks templates. But anyway, you can find the argumentation for C++ at the website of [Boost/Preprocessor].
