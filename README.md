@@ -190,3 +190,9 @@ A: Epilepsy is primarily targeted at pure C, and C lacks templates. But anyway, 
 ### Q: What standards are supported?
 
 A: C99/C++11 and onwards.
+
+### Q: Why not generate an amalgamated header?
+
+A: I don't like amalgamated headers because they induce additional hassle with updating and so on. In contrast to this, you can just add Epilepsy as a [Git submodule] and update it with `git submodule update --remote`.
+
+[Git submodule]: https://git-scm.com/book/en/v2/Git-Tools-Submodules
