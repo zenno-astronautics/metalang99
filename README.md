@@ -69,6 +69,7 @@ It features a wide range of concepts, including algebraic data types, control fl
 
  - [Motivation](#motivation)
  - [Getting started](#getting-started)
+ - [Optimisation guide](#optimisation-guide)
  - [Contributing](#contributing)
  - [Source code structure](#source-code-structure)
  - [FAQ](#faq)
@@ -131,6 +132,15 @@ Resources:
 Happy hacking!
 
 [precompiled headers]: https://en.wikipedia.org/wiki/Precompiled_header
+
+## Optimisation guide
+
+Generally speaking, the fewer reduction steps you perform, the faster you become. A reduction step is a concept formally defined in the [specification]. Here's its informal (and imprecise) description:
+
+ - Every `v(...)` is a reduction step.
+ - Every `E_call(op, ...)` induces as many reduction steps as required to evaluate `op` and `...` plus 1.
+
+To perform fewer reduction steps, consider using `E_trivialCall` as well as the plain versions (e.g., `E_consumePlain` instead of `E_consume`), when possible.
 
 ## Contributing
 
